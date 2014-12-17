@@ -4,4 +4,5 @@ public class BerryWrapperClass{
     public String test2{get;set;}
     public String test1{get;set;}
     public String test3{get;set;} 
+    public String test4{get;set;}
 }
