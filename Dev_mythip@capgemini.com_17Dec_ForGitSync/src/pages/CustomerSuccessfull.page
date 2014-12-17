@@ -1,0 +1,6 @@
+<apex:page showheader="false" controller="CustomerDetails" standardStylesheets="false">
+<apex:form >
+
+<apex:outputText value="Welcome {!firstName}"/>
+</apex:form>
+</apex:page>

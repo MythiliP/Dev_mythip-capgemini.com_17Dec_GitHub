@@ -1,0 +1,6 @@
+Hi,
+
+Your order with order number - {!Order__c.Name} is dispatched.
+Total Amount - {!Order__c.price__c}
+
+Thanks.

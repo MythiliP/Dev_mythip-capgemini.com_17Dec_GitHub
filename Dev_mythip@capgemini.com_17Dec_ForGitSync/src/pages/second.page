@@ -1,0 +1,14 @@
+<apex:page standardStylesheets="false" showHeader="false">
+<head>
+
+<script language="JavaScript">
+window.history.forward(1);
+</script>
+
+</head>
+
+    <apex:form >
+            <apex:image url="{!URLFOR($Resource.styleResources, 'images/blackberry.jpg')}" width="200"/>
+            <apex:commandButton value="Click here" action="/apex/third"/>
+            </apex:form>
+</apex:page>

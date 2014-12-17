@@ -1,0 +1,15 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" id="body">
+<style>
+#body {
+
+    background-repeat: repeat-x;
+    background-position: top;
+    background-color: red;
+    margin: 0px;
+    text-align: center;
+    display:block;
+}
+</style>
+
+  
+</apex:page>

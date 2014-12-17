@@ -1,0 +1,652 @@
+<apex:page controller="CMF.CVFC_DashboardHome" sidebar="false" showHeader="false">
+
+  
+ <apex:pageMessages ></apex:pageMessages>  
+ 
+ <!-- CSS for File Type -->
+ <style>
+    
+    div.PDF
+    {
+        
+        width:35px;
+        height:40px;
+        background-image: url({!URLFOR($Resource.ResourceFile, 'rf/img/icon-pdf.png')}); 
+    }
+    div.doc
+    {
+        width:35px;
+        height:40px;
+        background-image: url({!URLFOR($Resource.ResourceFile, 'rf/img/icon-doc.png')}); 
+    }
+    div.docx
+    {
+        width:35px;
+        height:40px;
+        background-image: url({!URLFOR($Resource.ResourceFile, 'rf/img/icon-docx.png')}); 
+    }
+    div.EXCEL
+    {
+        width:40px;
+        height:40px;
+        background-image: url({!URLFOR($Resource.ResourceFile, 'rf/img/icon-xls.png')}); 
+    }
+    div.EXCEL_X
+    {
+        width:35px;
+        height:40px;
+        background-image: url({!URLFOR($Resource.ResourceFile, 'rf/img/icon-xlsx.png')}); 
+    }
+    div.POWER_POINT
+    {  
+        width:35px;
+        height:40px;
+        background-image: url({!URLFOR($Resource.ResourceFile, 'rf/img/icon-ppt.png')}); 
+    }
+    div.POWER_POINT_X
+    { 
+        width:35px;
+        height:40px;
+        background-image: url({!URLFOR($Resource.ResourceFile, 'rf/img/icon-pptx.png')}); 
+    }    
+    div.csv
+    {
+        width:35px;
+        height:40px;
+        background-image: url({!URLFOR($Resource.ResourceFile, 'rf/img/icon-csv.png')}); 
+    }
+    div.zip
+    {
+        width:35px;
+        height:40px;
+        background-image: url({!URLFOR($Resource.ResourceFile, 'rf/img/icon-zip.png')}); 
+    }
+    div.txt
+    {
+        width:35px;
+        height:40px;
+        background-image: url({!URLFOR($Resource.ResourceFile, 'rf/img/icon-txt.png')}); 
+        
+    }
+    ul.quicklinks
+    {
+        margin: 0; padding: 0;
+    }
+ </style>
+ 
+  <html>
+           <style>
+            #ticker2 .odd
+            {
+                background-color:transparent ;
+            }
+            #ticker2 .even
+            {
+                background-color:transparent;
+            }
+       </style>
+ 
+      <head>
+     
+    <apex:includeScript value="{!URLFOR($Resource.CMF__ResourceFile, 'rf/root/jquery-1.10.2.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.CMF__ResourceFile, 'rf/root/jquery-migrate-1.2.1.min.js')}"/>
+    
+    <apex:stylesheet value="{!URLFOR($Resource.CMF__ResourceFile, 'rf/css/master.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.CMF__ResourceFile, 'rf/css/style.css')}"/>
+    
+    <apex:includeScript value="{!URLFOR($Resource.CMF__ResourceFile, 'rf/js/jquery.vticker-min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.CMF__ResourceFile, 'rf/js/masterCM.js')}"/>
+    
+    <apex:includeScript value="{!URLFOR($Resource.CMF__ResourceFile, 'rf/rss/jquery.jgfeed-min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.CMF__iframeresize)}"/>
+    
+   
+
+    <!-- tab styling -->    
+   
+   
+    <!--<script src="jquery.jgfeed-min.js"></script>-->
+    <script type="text/javascript">
+    
+    $.jGFeed('{!URLENCODE(RssFeedLink)}',
+      function(feeds){
+      var htmls ;
+        // Check for errors
+        if(!feeds){
+          // there was an error
+          return false;
+        }
+        // do whatever you want with feeds here
+        for(var i=0; i<feeds.entries.length; i++){
+          var entry = feeds.entries[i];
+          // Entry title
+      if(htmls != undefined)            
+        htmls += '<p><a href = "' + entry.link +'" target="_blank">' + entry.title + '</a> </p>';
+      else
+         htmls ='';          
+        }
+        
+                $('#rss').append(htmls);
+      }, 4);
+      
+    </script>    
+   
+     
+  <script>  
+    /*********************************************************************
+*  #### Twitter Post Fetcher v10.0 ####
+*  Coded by Jason Mayes 2013. A present to all the developers out there.
+*  www.jasonmayes.com
+*  Please keep this disclaimer with my code if you use it. Thanks. :-)
+*  Got feedback or questions, ask here: 
+*  http://www.jasonmayes.com/projects/twitterApi/
+*  Updates will be posted to this site.
+*********************************************************************/
+var twitterFetcher=function(){function x(e){return e.replace(/<b[^>]*>(.*?)<\/b>/gi,function(c,e){return e}).replace(/class=".*?"|data-query-source=".*?"|dir=".*?"|rel=".*?"/gi,"")}function p(e,c){for(var g=[],f=RegExp("(^| )"+c+"( |$)"),a=e.getElementsByTagName("*"),h=0,d=a.length;h<d;h++)f.test(a[h].className)&&g.push(a[h]);return g}var y="",l=20,s=!0,k=[],t=!1,q=!0,r=!0,u=null,v=!0,z=!0,w=null,A=!0;return{fetch:function(e,c,g,f,a,h,d,b,m,n){void 0===g&&(g=20);void 0===f&&(s=!0);void 0===a&&(a=
+!0);void 0===h&&(h=!0);void 0===d&&(d="default");void 0===b&&(b=!0);void 0===m&&(m=null);void 0===n&&(n=!0);t?k.push({id:e,domId:c,maxTweets:g,enableLinks:f,showUser:a,showTime:h,dateFunction:d,showRt:b,customCallback:m,showInteraction:n}):(t=!0,y=c,l=g,s=f,r=a,q=h,z=b,u=d,w=m,A=n,c=document.createElement("script"),c.type="text/javascript",c.src="//cdn.syndication.twimg.com/widgets/timelines/"+e+"?&lang=en&callback=twitterFetcher.callback&suppress_response_codes=true&rnd="+Math.random(),document.getElementsByTagName("head")[0].appendChild(c))},
+callback:function(e){var c=document.createElement("div");c.innerHTML=e.body;"undefined"===typeof c.getElementsByClassName&&(v=!1);e=[];var g=[],f=[],a=[],h=[],d=0;if(v)for(c=c.getElementsByClassName("tweet");d<c.length;){0<c[d].getElementsByClassName("retweet-credit").length?a.push(!0):a.push(!1);if(!a[d]||a[d]&&z)e.push(c[d].getElementsByClassName("e-entry-title")[0]),h.push(c[d].getAttribute("data-tweet-id")),g.push(c[d].getElementsByClassName("p-author")[0]),f.push(c[d].getElementsByClassName("dt-updated")[0]);
+d++}else for(c=p(c,"tweet");d<c.length;)e.push(p(c[d],"e-entry-title")[0]),h.push(c[d].getAttribute("data-tweet-id")),g.push(p(c[d],"p-author")[0]),f.push(p(c[d],"dt-updated")[0]),0<p(c[d],"retweet-credit").length?a.push(!0):a.push(!1),d++;e.length>l&&(e.splice(l,e.length-l),g.splice(l,g.length-l),f.splice(l,f.length-l),a.splice(l,a.length-l));c=[];d=e.length;for(a=0;a<d;){if("string"!==typeof u){var b=new Date(f[a].getAttribute("datetime").replace(/-/g,"/").replace("T"," ").split("+")[0]),b=u(b);
+f[a].setAttribute("aria-label",b);if(e[a].innerText)if(v)f[a].innerText=b;else{var m=document.createElement("p"),n=document.createTextNode(b);m.appendChild(n);m.setAttribute("aria-label",b);f[a]=m}else f[a].textContent=b}b="";s?(r&&(b+='<div class="user">'+x(g[a].innerHTML)+"</div>"),b+='<p class="tweet">'+x(e[a].innerHTML)+"</p>",q&&(b+='<p class="timePosted">'+f[a].getAttribute("aria-label")+"</p>")):e[a].innerText?(r&&(b+='<p class="user">'+g[a].innerText+"</p>"),b+='<p class="tweet">'+e[a].innerText+
+"</p>",q&&(b+='<p class="timePosted">'+f[a].innerText+"</p>")):(r&&(b+='<p class="user">'+g[a].textContent+"</p>"),b+='<p class="tweet">'+e[a].textContent+"</p>",q&&(b+='<p class="timePosted">'+f[a].textContent+"</p>"));A&&(b+='');c.push(b);a++}if(null==w){e=c.length;g=0;f=document.getElementById(y);for(h="<ul>";g<e;)h+="<li>"+c[g]+"</li>",g++;f.innerHTML=h+"</ul>"}else w(c);t=!1;0<k.length&&(twitterFetcher.fetch(k[0].id,k[0].domId,k[0].maxTweets,k[0].enableLinks,k[0].showUser,k[0].showTime,k[0].dateFunction,k[0].showRt,k[0].customCallback,k[0].showInteraction),k.splice(0,1))}}}();
+
+
+/*
+* ### HOW TO CREATE A VALID ID TO USE: ###
+* Go to www.twitter.com and sign in as normal, go to your settings page.
+* Go to "Widgets" on the left hand side.
+* Create a new widget for what you need eg "user timeline" or "search" etc. 
+* Feel free to check "exclude replies" if you dont want replies in results.
+* Now go back to settings page, and then go back to widgets page, you should
+* see the widget you just created. Click edit.
+* Now look at the URL in your web browser, you will see a long number like this:
+* 345735908357048478
+* Use this as your ID below instead!
+*/
+
+twitterFetcher.fetch('{!jsencode(tweetID)}','example1', 5, true, false, false);
+
+    
+  </script>  
+
+<script type="text/javascript">
+$ (function(){
+   
+    
+    $('#example1').vTicker({ 
+        speed: 1000,
+        pause: 3000,
+        animation: 'fade',
+        mousePause: false,
+        
+        showItems: 1
+    });
+    
+   
+    
+    
+   
+});
+      
+        
+</script> 
+  
+    <script type="text/javascript">
+       $(document).ready(function() {
+            $(function(){
+                $('.carousel').carousel({
+                  interval: parseInt({!jsencode(text(carouselDuration))})
+                });
+                $.iframeHeightExternal();
+            });
+        });
+    </script>
+    
+    
+    
+  </head>
+    
+  <body>
+  <apex:outputpanel id="layout1" >
+   <!--first block-->      
+   <div class="CMFcontainer">
+      <div class="row">
+          <!--slider block-->    
+  <apex:outputPanel styleClass="col-lg-7" layout="block" >
+  <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
+        <ol class="carousel-indicators">
+          <li class="active" data-target="#carousel-example-generic" data-slide-to="0" ></li>
+          <li class="" data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+         
+         <!--
+         <apex:outputText value="{!StaticResourceName}"></apex:outputText>
+         <apex:outputText value="/"></apex:outputText>
+         <apex:outputText value="{!image1}"></apex:outputText>
+         <apex:image url="{!URLFOR($Resource[StaticResourceName], imgUrl)}"/>
+          -->
+         
+         
+         <apex:outputPanel styleclass="item active" layout="block" rendered="{!if(noOfSlides >= 1, true,false)}"> 
+              <apex:image url="{!image1}" alt="First slide"  />             
+          </apex:outputPanel>
+          <apex:outputPanel styleclass="item" layout="block" rendered="{!if(noOfSlides >= 2, true,false)}">
+              <apex:image url="{!image2}" alt="Second slide"  /> 
+          </apex:outputPanel>
+          <apex:outputPanel styleclass="item" layout="block" rendered="{!if(noOfSlides >= 3, true,false)}">
+              <apex:image url="{!image3}" alt="Third slide"  /> 
+          </apex:outputPanel> 
+          <apex:outputPanel styleclass="item" layout="block" rendered="{!if(noOfSlides >= 4, true,false)}">
+              <apex:image url="{!image4}" alt="Fourth slide"  /> 
+          </apex:outputPanel> 
+          <apex:outputPanel styleclass="item" layout="block" rendered="{!if(noOfSlides >= 5, true,false)}">
+              <apex:image url="{!image5}" alt="Five slide"  /> 
+          </apex:outputPanel> 
+          <apex:outputPanel styleclass="item" layout="block" rendered="{!if(noOfSlides >= 6, true,false)}">
+              <apex:image url="{!image6}" alt="Six slide"  /> 
+          </apex:outputPanel> 
+          <apex:outputPanel styleclass="item" layout="block" rendered="{!if(noOfSlides >= 7, true,false)}">
+              <apex:image url="{!image7}" alt="Seventh slide"  /> 
+          </apex:outputPanel> 
+          <apex:outputPanel styleclass="item" layout="block" rendered="{!if(noOfSlides >= 8, true,false)}">
+              <apex:image url="{!image8}" alt="Eighth slide"  /> 
+          </apex:outputPanel>
+         <!--   
+         <div class="item active"> 
+              <apex:image rendered="{!if(sr.size == 0,  true,false )}" url="{!URLFOR($Resource[StaticResourceName], image1)}" alt="First slide"  />             
+              <apex:image rendered="{!if(sr.size > 0, true, false)}" url="{!URLFOR($Resource[StaticResourceName], image1)}" alt="First slide" />
+          </div>
+          <div class="item">
+              <apex:image url="{!URLFOR($Resource[StaticResourceName], image2)}" alt="second slide" rendered="{!if(sr.size == 0, true ,false )}" />
+              <apex:image url="{!URLFOR($Resource[StaticResourceName], image2)}" alt="second slide" rendered="{!if(sr.size > 0, true, false)}"/>
+          </div>
+          <div class="item">
+              <apex:image url="{!URLFOR($Resource[StaticResourceName], image3)}" alt="third slide" rendered="{!if(sr.size == 0, true , false)}" />
+              <apex:image url="{!URLFOR($Resource[StaticResourceName], image3)}" alt="third slide" rendered="{!if(sr.size > 0, true, false)}"/>
+          </div> 
+          -->
+         
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+          <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+          <span class="icon-next"></span>
+        </a>
+      </div>
+  </apex:outputPanel>
+   <!--/slider block-->  
+   
+    <!--slider right block-->
+   <div class="col-lg-5 col-sm-12">
+      <div class="row">
+            <apex:outputPanel styleClass="{!reSizeQuickLink}" rendered="{!if(homepgSettingQuickL.size>0, true, false)}" layout="block">
+              <!--Quick Links Panel-->
+              <div class="panel panel-default">
+                  <div class="panel-heading">
+                  <h3 class="panel-title">Quick Links</h3>
+                  </div>
+              <div class="panel-body min-panel">
+              <ul class="quicklinks">
+              <apex:outputLink value="{!homepgSettingQuickL[0].Quick_Links_Url_1__c }" rendered="{!if(homepgSettingQuickL.size > 0 && homepgSettingQuickL[0].Quick_Links_Label1__c != null, true, false)}" target="_blank"><li> {!homepgSettingQuickL[0].Quick_Links_Label1__c}</li> </apex:outputLink>      
+              <apex:outputLink value="{!homepgSettingQuickL[0].Quick_Links_Url_2__c }" rendered="{!if(homepgSettingQuickL.size > 0 && homepgSettingQuickL[0].Quick_Links_Label_2__c != null, true, false)}" target="_blank"><li> {!homepgSettingQuickL[0].Quick_Links_Label_2__c}</li>  </apex:outputLink>    
+              <apex:outputLink value="{!homepgSettingQuickL[0].Quick_Links_Url_3__c }" rendered="{!if(homepgSettingQuickL.size > 0 && homepgSettingQuickL[0].Quick_Links_Label_3__c != null, true, false)}" target="_blank"><li> {!homepgSettingQuickL[0].Quick_Links_Label_3__c}</li>  </apex:outputLink>    
+              <apex:outputLink value="{!homepgSettingQuickL[0].Quick_Links_Url_4__c }" rendered="{!if(homepgSettingQuickL.size > 0 && homepgSettingQuickL[0].Quick_Links_Label_4__c != null,  true, false)}" target="_blank"><li> {!homepgSettingQuickL[0].Quick_Links_Label_4__c}</li>  </apex:outputLink>    
+              <apex:outputLink value="{!homepgSettingQuickL[0].Quick_Links_Url_5__c }" rendered="{!if(homepgSettingQuickL.size > 0 && homepgSettingQuickL[0].Quick_Links_Label_5__c != null, true, false)}" target="_blank"><li> {!homepgSettingQuickL[0].Quick_Links_Label_5__c}</li>  </apex:outputLink>    
+            
+                 
+              </ul>
+              </div>
+              </div>
+            </apex:outputPanel><!-- col-lg-6 col-sm-6 closed-->  
+    
+        <!--Tweet Panel-->  
+    <apex:outputPanel styleClass="{!reSizeTwitter } tweets " rendered="{!if(homepgtweeter.size > 0, true, false)}" layout="block">
+        <div class="panel panel-default ">
+               <div class="panel-heading">
+               <h3 class="panel-title pull-left">Tweets</h3>
+               <div class="pull-right twit-button"><a href="https://twitter.com/twitter" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @twitter</a>
+               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+               <div class="clearfix"></div>
+               </div>
+          <div class="panel-body min-panel">
+          <div id="example1">
+          <ul>
+          <li><p></p></li>
+          </ul>
+          </div>
+          </div>
+        </div>
+    </apex:outputPanel>
+      <!--Tweet Panel-->     
+     </div><!--slider row close--> 
+    
+    <!--/Right Sections Bottom-->         
+<div class="row">
+          
+        <apex:outputPanel styleClass="{!reSizeRss}" rendered="{!if(homepgSettingRSSF.size > 0, true, false)}" layout="block">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+              <h3 class="panel-title">Company Feeds</h3>
+          </div>
+  
+          <div class="panel-body">  
+          <div  class="panel-body min-panel" style="padding:0px;">
+             <div id="rss" >
+                
+             </div>
+          </div> 
+          </div>
+          </div>
+        </apex:outputPanel>
+  
+          <!--News Container-->
+  <apex:outputPanel styleClass="{!reSizeProfile}" rendered="{!if(homepgProfile.size > 0, true, false)}" layout="block">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Profile Completeness</h3>
+        </div>
+         <div class="panel-body ">
+            <div  class="panel-body min-panel">
+      <!--News with heading and sub-->
+            <!--  <div class="maxheight300">-->
+                <apex:outputPanel rendered="{!if(hideProfileUser == true, false, true )}">
+                <h5>User Profile</h5>
+        
+                <div Class="progress progress-striped" >
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{!HTMLENCODE(userProfile)}" aria-valuemin="0" aria-valuemax="100" style="width:{!HTMLENCODE(userProfile)}%">
+                        <span class="sr-only">"{!HTMLENCODE(userProfile)}"  Complete (success)</span>
+                        
+                    </div>
+                </div>
+    
+                <div class="clearfix"></div>   
+          
+                <div class="pull-left">
+                    {!HTMLENCODE(userProfile)}%
+                </div>
+          
+                <div class="pull-right">
+                    100%
+                </div>  
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!if(hideProfileAccount == true, false, true)}" layout="block">
+                <div class="clearfix"></div>   
+                <p></p>  
+                
+                <h5>Account Profile</h5>
+        
+                
+                <div Class="progress progress-striped" >
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{!HTMLENCODE(accountProfile)}" aria-valuemin="0" aria-valuemax="100" style="width:{!HTMLENCODE(accountProfile)}%">
+                        <span class="sr-only">"{!HTMLENCODE(accountProfile)}" Complete (success)</span>
+                    </div>
+                </div>
+    
+                <div class="clearfix"></div>   
+          
+                <div class="pull-left">
+                    {!HTMLENCODE(accountProfile)}%
+                </div>
+          
+                <div class="pull-right">
+                    100%
+                </div>  
+                <div class="clearfix"></div> <p></p>
+                
+                </apex:outputPanel>
+            <!--</div>-->
+    </div>
+    </div>
+    </div>
+  </apex:outputPanel>
+ </div>
+         <!--Right Sections bottom-->     
+    
+            
+   </div><!-- row class close-->
+   </div><!--slider right block--> 
+   
+   <div class="row">
+    <apex:outputPanel styleClass="col-lg-12"  layout="block" rendered="{!displayChatter == true}">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Chatter Feeds</h3>
+            </div>
+            <div class="panel-body">
+   
+        <!--News with heading and sub-->
+            <div class="maxheight300">
+        
+                <chatter:feed entityId="{!$User.Id}"/>
+            </div>
+      
+            </div>
+        </div>   
+    </apex:outputPanel>
+   </div>
+   
+    <div class="row">
+    <apex:outputPanel styleClass="{!reSizeNews}"  layout="block"  rendered="{!if(newsAnnouncement.size>0 , true, false)}">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+            <h3 class="panel-title">News and Announcements</h3>
+        </div>
+        <div class="panel-body">
+   
+        <!--News with heading and sub-->
+        <div class="maxheight300">
+        
+        <apex:repeat value="{!newsAnnouncement}" var="na">           
+                       <div class="media">
+                       <div class="media-body">
+                           <h5 class="media-heading" >{!na.Name}</h5>
+                           <apex:outputfield value="{!na.CMF__Description__c}" style="padding-top:5px;"/> 
+                           </div>
+                       </div> 
+          </apex:repeat>
+       </div>
+      
+   </div>
+   </div>
+   </apex:outputPanel>
+   <apex:outputPanel styleClass="{!reSizeAlert}"  layout="block"  rendered="{!if(displayAlerts==true, true, false)}">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+            <h3 class="panel-title">Alerts</h3>
+        </div>
+        <div class="panel-body" style="padding:0px;">
+   
+        <!--News with heading and sub-->
+        <div class="maxheight300" style="padding-bottom:0px;height:280px;padding-right:0px;">
+             <div class="list-group">
+             <apex:repeat var="a" value="{!alerts}">
+                <apex:outputLink value="{!if(a.CMF__Alert_URL__c != null , a.CMF__Alert_URL__c,'#')}" styleclass="list-group-item"> 
+                
+                <apex:outputpanel styleClass="badge badge-danger" rendered="{!if(a.CMF__Color__c == 'Red',true,false)}">{!a.CMF__Alert_Value__c}</apex:outputpanel>
+                <apex:outputpanel styleClass="badge badge-warning" rendered="{!if(a.CMF__Color__c == 'Amber',true,false)}">{!a.CMF__Alert_Value__c}</apex:outputpanel>
+                <apex:outputpanel styleClass="badge badge-success" rendered="{!if(a.CMF__Color__c == 'Green',true,false)}">{!a.CMF__Alert_Value__c}</apex:outputpanel>
+                    <h5 class="list-group-item-heading"> {!a.CMF__Alert_Text__c} </h5>
+                     <p class="list-group-item-text"> {!a.CMF__Alert_Sub_Text__c} </p>   
+                </apex:outputLink>
+             </apex:repeat>
+                
+    
+      </div>
+       
+       </div>
+      
+   </div>
+   </div>
+   </apex:outputPanel>
+   <apex:outputPanel styleClass="{!reSizeGoal}"  layout="block"  rendered="{!if( displayGoals==true, true, false)}">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+            <h3 class="panel-title">Goals</h3>
+        </div>
+        <div class="panel-body">
+   
+        <div class="maxheight300">
+        <apex:outputpanel ><div class="clearfix" style="padding-bottom:10px;"></div></apex:outputpanel>
+        <apex:repeat value="{!goalResultsOrganization}" var="gO" >
+            <apex:outputpanel rendered="{!if(gO.CMF__Target_Amount__c != null && gO.CMF__Target_Amount__c > 0 , true,false)}" styleclass="TargetAmount">
+            <h5>{!gO.goals__r.name} </h5>
+  
+            <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{!gO.Achieved_amount_Percentage__c}" aria-valuemin="0" aria-valuemax="100" style="width:{!gO.Achieved_amount_Percentage__c}%">
+                    <span class="sr-only">{!gO.Achieved_amount_Percentage__c} Complete (success)</span>
+                </div>
+            </div>
+                <div class="clearfix"></div>   
+          
+                <div class="pull-left">
+                    
+                    <apex:outputText value="{0,number,#,##0}">$ 
+                        <apex:param value="{!gO.CMF__Acheived_Amount__c}" />
+                    </apex:outputText>
+                </div>
+          
+                <div class="pull-right">
+                    <apex:outputText value="{0,number,#,##0}">$ 
+                        <apex:param value="{!gO.CMF__Target_Amount__c}" />
+                    </apex:outputText>
+                </div>  
+                <div class="clearfix" style="padding-bottom:10px;"></div>  
+            </apex:outputpanel>
+            <apex:outputpanel rendered="{!if(gO.CMF__Target_Count_Number__c != null && gO.CMF__Target_Count_Number__c > 0, true,false)}" styleclass="TargetCount">
+            <h5>{!gO.goals__r.name} </h5> 
+  
+            <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{!gO.Achieved_Count_percentage__c}" aria-valuemin="0" aria-valuemax="100" style="width:{!gO.Achieved_Count_percentage__c}%">
+                    <span class="sr-only">{!gO.Achieved_Count_percentage__c} Complete (success)</span>
+                </div>
+            </div>
+                <div class="clearfix"></div>   
+          
+                <div class="pull-left">
+                    <apex:outputField value="{!gO.CMF__Acheived_Count__c}" />
+                </div>
+          
+                <div class="pull-right">
+                    <apex:outputField value="{!gO.CMF__Target_Count_Number__c}" />
+                </div>  
+                <div class="clearfix" style="padding-bottom:10px;"></div>   
+            </apex:outputpanel>
+            
+        </apex:repeat>
+         <apex:outputpanel rendered="{!if(displayGoals==true, true,false)}"><div class="clearfix" style="padding-bottom:10px;"></div> </apex:outputpanel>
+        <apex:repeat value="{!goalResultsIndividual}" var="gO" >
+            <apex:outputpanel rendered="{!if(gO.CMF__Target_Amount__c != null && gO.CMF__Target_Amount__c > 0, true,false)}" styleclass="TargetAmount">
+            <h5>{!gO.goals__r.name}</h5>
+  
+            <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{!gO.Achieved_amount_Percentage__c}" aria-valuemin="0" aria-valuemax="100" style="width:{!gO.Achieved_amount_Percentage__c}%">
+                    <span class="sr-only">{!gO.Achieved_amount_Percentage__c} Complete (success)</span>
+                </div>
+            </div>
+                <div class="clearfix"></div>   
+          
+                <div class="pull-left">
+                    <apex:outputText value="{0,number,#,##0}">$ 
+                        <apex:param value="{!gO.CMF__Acheived_Amount__c}" />
+                    </apex:outputText>
+                </div>
+          
+                <div class="pull-right">
+                    <apex:outputText value="{0,number,#,##0}">$ 
+                        <apex:param value="{!gO.CMF__Target_Amount__c}" />
+                    </apex:outputText>
+                </div>  
+                <div class="clearfix" style="padding-bottom:10px;"></div>  
+            </apex:outputpanel>
+            <apex:outputpanel rendered="{!if(gO.CMF__Target_Count_Number__c != null && gO.CMF__Target_Count_Number__c > 0 && displayGoals==true, true,false)}" styleclass="TargetCount">
+            <h5>{!gO.goals__r.name} </h5> 
+  
+            <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{!gO.Achieved_Count_percentage__c}" aria-valuemin="0" aria-valuemax="100" style="width:{!gO.Achieved_Count_percentage__c}%">
+                    <span class="sr-only">{!gO.Achieved_Count_percentage__c} Complete (success)</span>
+                </div>
+            </div>
+                <div class="clearfix"></div>   
+          
+                <div class="pull-left">
+                    <apex:outputField value="{!gO.CMF__Acheived_Count__c}" />
+                </div>
+          
+                <div class="pull-right">
+                    <apex:outputField value="{!gO.CMF__Target_Count_Number__c}" />
+                </div>  
+                <div class="clearfix" style="padding-bottom:10px;"></div>   
+            </apex:outputpanel>
+            
+        </apex:repeat>
+        
+
+      
+        
+       </div>
+      
+   </div>
+   </div>
+   </apex:outputPanel>
+   </div>
+   
+   
+   <div class="row">
+   
+    <!--column box 1-->  
+    <apex:outputPanel styleClass="col-lg-12" rendered="{!if(ctVersion.size > 0, true, false)}" layout="block">
+    <div Class="panel panel-default">
+    <div class="panel-heading">
+    <h3 class="panel-title">Marketing/Sales material for {!libraryName} </h3>
+    </div>
+    <div class="panel-body" style="padding:0px;">
+   
+      <!--table with icons-->
+   <div class="maxheight150" style="padding:0px;">
+         
+          <apex:dataTable var="cv" value="{!ctVersion}" styleClass="table table-striped table-bordered table-checks media-table dataTable" width="100%">
+              <apex:column >
+                                                <apex:facet name="header">Title</apex:facet>
+                                                    <a href="/{!cv.id}" target="_blank">{!cv.title}</a>
+                                                </apex:column>
+                                                <apex:column >
+                                                    <apex:facet name="header">Description</apex:facet>
+                                                    <apex:outputText value="{!cv.description}" />
+                                                </apex:column>
+                                                <apex:column >
+                                                    <apex:facet name="header">File Type</apex:facet>
+                                                    <div class="{!cv.FileType}"></div>
+                                                </apex:column>
+                                                <apex:column >
+                                                    <apex:facet name="header">Owner</apex:facet>
+                                                    <apex:outputText value="{!cv.Owner.Name}" />
+                                                </apex:column>
+                                                <apex:column >
+                                                    <apex:facet name="header">Version Number</apex:facet>
+                                                    <apex:outputText value="{!cv.VersionNumber}" />
+                                                </apex:column>
+          </apex:dataTable>               
+      </div>
+      
+   </div>
+  </div>
+  </apex:outputPanel>
+      <!--column box 1 end--> 
+  
+
+  
+   
+   </div>
+   
+    
+   </div><!-- closeing of container class-->
+   </apex:outputpanel>
+   
+   
+
+   <!--<script src="js/master.js"></script>-->
+  </body>
+</html>
+</apex:page>

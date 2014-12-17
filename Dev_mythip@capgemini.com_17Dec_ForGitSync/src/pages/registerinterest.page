@@ -1,0 +1,75 @@
+<apex:page standardStylesheets="false" showHeader="false" controller="CustomerLeadCaptureController">
+    <apex:composition template="template">
+        <apex:define name="body">
+
+            <div id="content-left">
+            <apex:image url="{!URLFOR($Resource.styleResources, 'images/blackberry.jpg')}" width="200"/>
+
+
+</div>
+<div id="content-right">
+<div id="thank_you_note">
+<apex:outputText value="{!custLeadDisplay.selectedDeviceName}"/>
+<apex:outputText value="Thank you for your interest in the {!custLeadDisplay.selectedDeviceName}. Please select the device you would like to purchase and provide your information below. A GCI representative will contact you regarding your interest withing 24 hours."/>
+</div>
+
+<div id="choice_of_phone">
+<apex:outputLabel ><b>Choice of Phone</b></apex:outputLabel>
+<p>
+<apex:selectRadio value="{!custLeadDisplay.selectedDeviceName}"/>
+</p>
+</div> 
+<div id="customer_info">
+<apex:outputLabel ><b>Customer Information</b></apex:outputLabel>
+<p class="req">
+<span>*</span>
+Indicates Required Fields
+</p>
+<p>
+<span>*</span>
+<apex:outputLabel value="First Name:" for="firstname"/>
+<apex:inputText id="firstname" value="{!custLeadDisplay.custContactInfo.firstName}"/>
+</p>
+<p>
+<span>*</span>
+<apex:outputLabel value="Last Name:" for="lastName"/>
+<apex:inputText id="lastName" value="{!custLeadDisplay.custContactInfo.lastName}"/>
+</p>
+<p>
+<span>*</span>
+<apex:outputLabel value="Current GCI Wireless Number:"/>
+<apex:inputText styleClass="width80px" id="curGCINumberPart1" value="{!custLeadDisplay.custContactInfo.curGCINumberPart1}"/>
+<apex:inputText styleClass="width80px" id="curGCINumberPart2" value="{!custLeadDisplay.custContactInfo.curGCINumberPart2}"/>
+<apex:inputText styleClass="width80px" id="curGCINumberPart3" value="{!custLeadDisplay.custContactInfo.curGCINumberPart3}"/>
+</p>
+<p>
+<span>*</span>
+<apex:outputLabel value="Best time to call:" for="bestTimeToCall"/>
+ <apex:selectList id="bestTimeToCall" value="{!custLeadDisplay.custContactInfo.bestTimeToCall}"/>
+</p>
+<p>
+<span>*</span>
+<apex:outputLabel value="Account Number:" for="accountNumber"/>
+<apex:inputText id="accountNumber" value="{!custLeadDisplay.custContactInfo.accountNumber}"/>
+</p>
+<p>
+<span>*</span>
+<apex:outputLabel value="Comments:" for="comments"/>
+<apex:inputTextarea id="comments" value="{!custLeadDisplay.custContactInfo.comments}"/>
+</p>
+
+<p class="submit_btn">
+<apex:commandbutton value="Submit" action="{!captureLead}"/>
+
+</p>
+</div>
+
+
+</div>
+<div class="clear"></div>
+
+
+</apex:define>
+
+ </apex:composition>
+</apex:page>

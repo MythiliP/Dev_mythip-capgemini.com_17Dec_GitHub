@@ -1,0 +1,6 @@
+<messaging:emailTemplate subject="hi" recipientType="Contact" relatedToType="Order__c">
+<messaging:htmlEmailBody >
+<p>Dear {!recipient.Name} </p>
+<p>your order num {!relatedTo.Name} {!relatedTo.price__c} </p>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

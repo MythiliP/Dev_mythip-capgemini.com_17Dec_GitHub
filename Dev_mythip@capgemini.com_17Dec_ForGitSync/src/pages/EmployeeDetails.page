@@ -1,0 +1,17 @@
+<apex:page standardStylesheets="false" showHeader="false" controller="Employee">
+<apex:form >
+<apex:messages />
+<apex:outputLabel value="Employee Id"/>&nbsp;
+<apex:inputText id="EmpID" value="{!empId}" /><br/><br/>
+<apex:outputLabel value="Employee Name"/>&nbsp;
+<apex:inputText id="EmpName" value="{!empName}" /><br/><br/>
+<apex:outputLabel value="Employee Address"/>&nbsp;
+<apex:inputText id="EmpAddress" value="{!empAddress}" /><br/><br/>
+<apex:outputLabel value="Employee Department"/>&nbsp;
+<apex:inputText id="EmpDept" value="{!empDepartment}"/><br/><br/>
+<apex:outputLabel value="Employee Salary"/>&nbsp;
+<apex:inputText id="EmpSalary" value="{!empSalary}" /><br/><br/>
+<apex:commandButton action="{!redirect}"  value="Submit" id="saveButton"/>&nbsp;&nbsp;&nbsp;
+<apex:commandButton action="{!clear}" value="Clear" id="clearButton"/>
+</apex:form>
+</apex:page>

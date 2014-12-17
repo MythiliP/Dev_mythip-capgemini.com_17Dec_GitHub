@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Position__c$Name</field>
+    </columns>
+    <columns>
+        <field>Position__c$Department__c</field>
+    </columns>
+    <columns>
+        <field>Position__c$Hiring_Manager__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>All positions</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Positions_Modified_UI_with_Hiring_manager_info__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Position__c$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Position__c$Date_closed__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

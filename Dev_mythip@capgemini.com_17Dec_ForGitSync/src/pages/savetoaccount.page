@@ -1,0 +1,9 @@
+<apex:page sidebar="false" showHeader="false" controller="SaveAccountController">
+<apex:form >
+  <apex:outputLabel >Account Name </apex:outputLabel><apex:inputText value="{!accName}"/><br/>
+    <apex:outputLabel >Account Number </apex:outputLabel><apex:inputText value="{!accNumber}"/><br/>
+     <apex:outputLabel >Account Source </apex:outputLabel><apex:inputText value="{!accSource}"/><br/>
+     <apex:outputLabel >Account Attendance </apex:outputLabel><apex:inputText value="{!accAttendance}"/><br/>
+     <apex:commandButton value="Save" action="{!saveAccount}"/>
+  </apex:form>
+</apex:page>

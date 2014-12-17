@@ -1,0 +1,25 @@
+<apex:page >
+<apex:form >
+  Test for selecting all checkboxes at once
+  <apex:inputCheckbox onclick="checkAll(this)"/><br/>
+  <apex:inputCheckbox onclick="checkAll(this)"/><br/>
+  <apex:inputCheckbox /><br/>
+  <apex:inputCheckbox />
+  <apex:inputtext />
+   <apex:inputCheckbox />
+    </apex:form>
+    <script>
+    function checkAll(cb)
+        {
+            var inputElem = document.getElementsByTagName("input");
+            var iCount = 0;
+            for(var i=0; i<inputElem.length; i++)
+            {
+               // if(inputElem[i].id.indexOf("OLItemCheck")!=-1) {
+                    inputElem[i].checked = cb.checked;
+                    iCount++;
+              //  }
+            }
+        } 
+    </script>
+</apex:page>

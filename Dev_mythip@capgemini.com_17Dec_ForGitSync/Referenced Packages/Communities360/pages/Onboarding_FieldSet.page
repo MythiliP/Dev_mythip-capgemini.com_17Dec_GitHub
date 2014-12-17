@@ -1,0 +1,69 @@
+<apex:page id="loginPage" showHeader="false" title="{!$Label.site.site_login}"  standardController="CMF__On_Boarding__c" extensions="CMF.onboarding_extCon">
+
+    <style>
+        h1{
+            font-size:16px;
+            padding-left:50px;
+            font-family:'trebuchet ms', helvetica, sans-serif;
+            color:#3366FF;
+            line-height:20px;
+        }
+        .tableStyle{
+            padding-left:50px;
+            font-size:14px;
+            font-family:'trebuchet ms', helvetica, sans-serif;
+            color:#343434;
+        }
+        .cm_formCss{
+             height:100%;
+             margin:auto;
+             width:960px;
+            
+
+        }
+        .tdStyleFirst{
+            height:25px;
+            margin-bottom:13px;
+            margin-left:2px;
+            width:50%;
+        }
+        .tdStyleSecond{
+            height:25px;
+            
+        }
+            
+    </style>
+
+
+  <apex:composition template="{!$Site.Template}" >
+    <apex:define name="body" >  
+       <apex:form styleClass="cm_formCss" id="cmForm" >
+      
+              <h1>Onboarding</h1>
+              <table class="tableStyle">              
+              <apex:repeat value="{!$ObjectType.CMF__On_Boarding__c.FieldSets.CMF__Onboarding_Field_set}" var="f"> 
+                    
+                    <tr>
+                        <td class="tdStyleFirst">
+                            <apex:outputText value="{!f.Label}"  />                          
+                            <apex:outputText value="*" style="color:red;" rendered="{!OR(f.DBRequired, f.required)}" /></td> 
+                                                  
+                        <td><apex:inputField value="{!CMF__On_Boarding__c[f]}" required="{!OR(f.DBRequired, f.required)}" />  </td>
+                    </tr>        
+                    
+              </apex:repeat>
+                      <tr>
+                          <td></td>
+                      </tr> 
+                      <tr>
+                          <td></td>                          
+                          <td> <apex:commandButton action="{!Save}" value="Submit"/>
+                               <apex:commandButton action="{!cancel}" value="Reset"/> </td>
+                      </tr>
+              </table>
+                          
+        
+      </apex:form>
+    </apex:define>
+  </apex:composition>
+</apex:page>

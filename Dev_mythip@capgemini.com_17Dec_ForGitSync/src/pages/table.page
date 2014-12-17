@@ -1,0 +1,17 @@
+<apex:page controller="tableclass">
+  <apex:pageblock >
+      <apex:pageBlockSection columns="1">
+          <table width="100%" border="1">
+              <tr> <td>dffsdf</td><td>dffsdf</td><td>dffsdf</td></tr>
+                            <tr> <td>dffsdf</td><td>dffsdf</td><td>dffsdf</td></tr>
+          </table>
+      </apex:pageBlockSection>
+     
+  </apex:pageblock>
+  <apex:pageblock >
+  <apex:pageblocksection >
+      
+      
+  </apex:pageblocksection>
+  </apex:pageblock>
+</apex:page>

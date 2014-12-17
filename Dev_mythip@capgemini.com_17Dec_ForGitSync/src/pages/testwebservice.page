@@ -1,0 +1,6 @@
+<apex:page controller="TestWebServiceController">
+<apex:form >
+    Name:<apex:inputtext value="{!accName}"/>
+    <apex:commandButton value="Send" action="{!sendToOtherInstance}"/>
+ </apex:form>
+</apex:page>

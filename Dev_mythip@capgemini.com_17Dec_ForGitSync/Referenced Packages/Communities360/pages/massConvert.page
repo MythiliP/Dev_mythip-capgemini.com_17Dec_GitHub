@@ -1,0 +1,27 @@
+<apex:page standardcontroller="Lead" extensions="CMF.CVFC_massConvert" action="{!convertLeads}">
+
+ <apex:pageBlock >
+    <apex:pageBlockSection columns="1" > 
+        
+                <apex:outputText value="{!errMsg}"   />
+            
+    </apex:pageBlockSection>
+    <apex:pageBlockSection columns="1" title="Following Leads were successfully converted">
+        <apex:pageBlockTable id="conversionResults" value="{!cr}" var="s">
+
+            <apex:column headerValue="Lead" >
+                <apex:outputText value="{!s.leadname}"   />
+            </apex:column> 
+            <apex:column headerValue="Opportunity" >
+                <apex:outputLink value="/{!s.oppId}" rendered="{!if(s.oppId == null || s.oppId =='', false,true)}"> {!s.oppName} </apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="Account" >
+                <apex:outputLink value="/{!s.accId}" rendered="{!if(s.accId == null || s.accId =='', false,true)}"> {!s.AccountName} </apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="Contact" >
+                <apex:outputLink value="/{!s.contactId}" rendered="{!if(s.contactId == null || s.contactId =='', false,true)}"> {!s.Contactname} </apex:outputLink>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlockSection>
+ </apex:pageBlock>
+</apex:page>

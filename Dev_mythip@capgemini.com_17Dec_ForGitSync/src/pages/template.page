@@ -1,0 +1,15 @@
+<apex:page showHeader="false" standardStyleSheets="false">
+	<apex:include pageName="head"/>
+	<body>
+		<apex:form id="bodyForm">
+			<div id="wrapper">
+				<apex:include pageName="header"/>	
+					<div id="wapperbody">
+						<apex:insert name="body"/>
+					</div>
+					<apex:include pageName="footer"/>  
+					</div>			
+		</apex:form>
+	</body>    
+ 
+</apex:page>

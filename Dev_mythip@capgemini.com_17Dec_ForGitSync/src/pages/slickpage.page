@@ -1,0 +1,26 @@
+<apex:page >
+ 
+<apex:includeScript value="{!$Resource.JQueryFile}"/>
+ <apex:includeScript value="{!URLFOR($Resource.Slick, 'js/jquery.slick.menu.2.1.js')}"  />
+<apex:stylesheet value="{!URLFOR($Resource.Slick, 'css/dcslickmenu.css')}"  />
+
+        <script type="text/javascript">
+      
+           $(document).ready(function(){
+        //   alert('hi');
+         //   $('#test').hide();
+           
+ 
+     $('#test').dcSlick();
+   
+        
+           });
+        </script> 
+        <div id="aaa"> 
+        gsgsfg 
+        </div>
+        <div id="test">
+        gsdfg
+        gsfg
+        </div>
+</apex:page>

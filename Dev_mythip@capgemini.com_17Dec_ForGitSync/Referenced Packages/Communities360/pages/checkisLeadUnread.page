@@ -1,0 +1,4 @@
+<apex:page standardcontroller="Lead" extensions="CMF.CVFC_checkisLeadUnRead" action="{!checkisLeadUnRead}">
+
+
+</apex:page>

@@ -1,0 +1,188 @@
+<messaging:emailTemplate subject="hi" recipientType="Contact" relatedToType="Order__c">
+<messaging:htmlEmailBody >
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Thank You for Choosing GCI.</title>
+    <style>
+<![CDATA[
+        table#body td,
+        table#body th {
+            color:#767676;
+            font-family:Arial, sans-serif;
+            font-size:12px;
+            line-height:18px;
+            }
+        table#body a {
+            color:#c31e2d;
+            font-weight:bold;
+            }
+        table#body h1 {
+            color:#4a4a4a;
+            font-size:16px;
+            font-weight:normal;
+            line-height:24px;
+            margin:0;
+            }
+        table#body h2 {
+            color:#bd302c;
+            font-size:14px;
+            font-weight:normal;
+            margin:0 0 18px;
+            line-height:18px;
+            }
+        table#body h3 {
+            color:#4a4a4a;
+            font-size:11px;
+            font-weight:bold;
+            line-height:18px;
+            margin:0 0 18px;            
+            text-transform:uppercase;
+            }
+        table#body h4 {
+            color:#4a4a4a;
+            font-weight:bold;
+            margin:0 0 18px;
+            }
+        table#body h5 {
+            margin:0;
+            }
+        table#body .total {
+            color:#4a4a4a;
+            font-weight:bold;
+            }
+        table#body th h3 {
+            border-bottom:1px solid #dddddd;
+            margin:0;
+            }
+        table#body p {
+            margin:0 0 18px;
+            }
+        table#layout {
+            margin:auto;
+            }
+        table#footer td {
+            margin:auto;
+            background:#ffffff;
+            }
+        table#footer td h3,
+        table#footer td h4,
+        table#footer td p {
+            margin:0;
+            }
+        table#footer td p.fineprint {
+            font-size:10px;
+            margin:0 0 18px;
+            color:#7e7e7e;
+            }
+        table#content tr td {
+            background:#ffffff;
+            padding:12px 24px 12px;
+            }
+        table#footer tr td {
+            background:#ffffff;
+            padding:0 12px 0 24px;
+            }
+        table#content tr td table.columns tr td,
+        table#content tr td table.grid tr td {
+            padding:0 12px 0 0;
+            vertical-align:top;
+            }
+        table#content tr td table.columns tr th {
+            font-weight:bold;
+            padding:0 12px 0 0;
+            vertical-align:top;
+            text-align:left;
+            }
+        table#content tr td table.grid tr th {
+            font-weight:bold;
+            padding:0 12px 12px 0;
+            vertical-align:top;
+            text-align:left;
+            }
+        table#content tr th.condensed p,
+        table#content tr td.condensed p,
+        table#content tr td table.grid tr td p {
+            margin-bottom:0;
+            }
+        img.spacer {
+            display:block;
+            }
+        img.rule {
+            display:block;
+            margin:18px 0;
+            }
+        img.icon {
+            position:relative;
+            top:-5px;
+        }
+        span.follow {
+            font-weight:bold;
+        }
+    ]]>
+    </style>
+  </head>
+  <body bgcolor="#efefef">
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" id="body"><tr><td bgcolor="#efefef" align="center" style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px;">
+            <img src="{!URLFOR($Resource.styleResources, 'images/blank.gif')}" height="32" width="584" class="spacer" style="display: block;" /><table cellpadding="0" cellspacing="0" border="0" width="584" id="layout" style="margin: auto;"><tr id="header"><td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px;"><img src="{!URLFOR($Resource.styleResources, 'images/header.jpg')}" alt="Thank you for choosing GCI." width="584" height="354" border="0" /></td>
+                </tr><tr><td align="left" style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px;">
+                        <table id="content" cellpadding="0" cellspacing="0" border="0" width="584"><tr><td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; background-color: #ffffff; padding: 12px 24px;" bgcolor="#ffffff">
+                                    <h1 style="color: #4a4a4a; font-size: 16px; font-weight: normal; line-height: 24px; margin: 0;">Order Confirmation</h1>
+                                    <h2 style="color: #bd302c; font-size: 14px; font-weight: normal; line-height: 18px; margin: 0 0 18px;">Thank you for your recent order!</h2>
+                                    <p style="margin: 0 0 18px;"><strong>Ordered On</strong>: February 20, 2011 1:55 PM AST<br /><strong>Your Order ID Number</strong>: 123456XYZPDQ<br /><strong>Email</strong>: jane.doe@bionictangerine.com</p>
+                                    <table class="columns"><tr valign="top"><th style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; font-weight: bold; vertical-align: top; text-align: left; padding: 0 12px 0 0;" align="left" valign="top"><p style="margin: 0 0 18px;"><strong>Billing Address:</strong></p></th>
+                                            <td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0 0 18px;">Jane Doe<br />
+                                            1234 Main Street<br />
+                                            Apt. 3B<br />
+                                            Anchorage, AK 99503</p></td>
+                                        </tr><tr valign="top"><th style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; font-weight: bold; vertical-align: top; text-align: left; padding: 0 12px 0 0;" align="left" valign="top"><p style="margin: 0 0 18px;">Shipping Address:</p></th>
+                                            <td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0 0 18px;">Jane Doe<br />
+                                            1234 Main Street<br />
+                                            Apt. 3B<br />
+                                            Anchorage, AK 99503</p></td>
+                                        </tr><tr valign="top"><th class="condensed" style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; font-weight: bold; vertical-align: top; text-align: left; padding: 0 12px 0 0;" align="left" valign="top"><p style="margin: 0;">Shipping Method:</p></th>
+                                            <td class="condensed" style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">Standard Shipping</p></td>
+                                        </tr><tr valign="top"><th class="condensed" style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; font-weight: bold; vertical-align: top; text-align: left; padding: 0 12px 0 0;" align="left" valign="top"><p style="margin: 0;">Payment Type:</p></th>
+                                            <td class="condensed" style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">Credit Card, VISA ending in 1203</p></td>
+                                        </tr><tr valign="top"><th class="condensed" style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; font-weight: bold; vertical-align: top; text-align: left; padding: 0 12px 0 0;" align="left" valign="top"><p style="margin: 0;">Order Total:</p></th>
+                                            <td class="condensed" style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">$398.00</p></td>
+                                        </tr></table><br /><br /><h2 style="color: #bd302c; font-size: 14px; font-weight: normal; line-height: 18px; margin: 0 0 18px;">Order Summary</h2>  
+                                    <table class="grid" width="100%"><tr valign="top"><th style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; font-weight: bold; vertical-align: top; text-align: left; padding: 0 12px 12px 0;" align="left" valign="top"><h3 style="color: #4a4a4a; font-size: 11px; font-weight: bold; line-height: 18px; text-transform: uppercase; border-bottom-width: 1px; border-bottom-color: #dddddd; border-bottom-style: solid; margin: 0;">Quantity</h3></th>
+                                            <th style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; font-weight: bold; vertical-align: top; text-align: left; padding: 0 12px 12px 0;" align="left" valign="top"><h3 style="color: #4a4a4a; font-size: 11px; font-weight: bold; line-height: 18px; text-transform: uppercase; border-bottom-width: 1px; border-bottom-color: #dddddd; border-bottom-style: solid; margin: 0;">Description</h3></th>
+                                            <th style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; font-weight: bold; vertical-align: top; text-align: left; padding: 0 12px 12px 0;" align="left" valign="top"><h3 style="color: #4a4a4a; font-size: 11px; font-weight: bold; line-height: 18px; text-transform: uppercase; border-bottom-width: 1px; border-bottom-color: #dddddd; border-bottom-style: solid; margin: 0;">Cost</h3></th>
+                                        </tr><tr><td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">(1)</p></td>
+                                            <td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">iPhone (Black/64G)</p>
+                                            </td><td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">$150.00</p>
+                                        </td></tr><tr><td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">(1)</p>
+                                            </td><td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">iPhone (White/16G)</p>
+                                            </td><td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">$100.00</p>
+                                        </td></tr><tr><td colspan="3" style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><img src="{!URLFOR($Resource.styleResources, 'images/grey.gif')}" alt="" width="520" height="1" class="rule" style="display: block; margin: 18px 0;" /></td>
+                                        </tr><tr><td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">Item Subtotal</p></td>
+                                            <td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"></td>
+                                            <td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">$250.00</p></td>
+                                        </tr><tr><td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">Shipping &amp; Handling</p></td>
+                                            <td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"></td>
+                                            <td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">$148.00</p></td>
+                                        </tr><tr><td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><h3 style="color: #4a4a4a; font-size: 11px; font-weight: bold; line-height: 18px; text-transform: uppercase; margin: 0 0 18px;">Order Total</h3></td>
+                                            <td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"></td>
+                                            <td class="total" style="color: #4a4a4a; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; font-weight: bold; vertical-align: top; background-color: #ffffff; padding: 0 12px 0 0;" bgcolor="#ffffff" valign="top"><p style="margin: 0;">$398.00</p></td>
+                                        </tr></table><img src="{!URLFOR($Resource.styleResources, 'images/grey.gif')}" alt="" width="520" height="1" class="rule" style="display: block; margin: 18px 0;" /></td>
+                            </tr></table><table id="footer" cellpadding="0" cellspacing="0" border="0" width="584"><tr valign="top"><td width="52" style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; background-color: #ffffff; margin: auto; padding: 0 12px 0 24px;" bgcolor="#ffffff"><img src="{!URLFOR($Resource.styleResources, 'images/logo.gif')}" alt="[Logo]" width="52" height="41" /></td>
+                                <td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; background-color: #ffffff; margin: auto; padding: 0 12px 0 24px;" bgcolor="#ffffff"><h4 style="color: #4a4a4a; font-weight: bold; margin: 0;">Need to Reach Us?</h4>
+                                <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetuer adipiscingh.</p>
+                                <h3 style="color: #4a4a4a; font-size: 11px; font-weight: bold; line-height: 18px; text-transform: uppercase; margin: 0;">907-265-5400 or 1-800-800-4800 toll free</h3>
+                                <p class="fineprint" style="font-size: 10px; color: #7e7e7e; margin: 0 0 18px;">or dial *611 for free from your existing GCI phone.</p>
+                                <p style="margin: 0;"><a href="http://www.gci.com/store-locations" style="color: #c31e2d; font-weight: bold;">Find a GCI Store Nearby &#xBB;</a> &#xA0;&#xA0;&#xA0;  <a href="http://www.gci.com/contact-us" style="color: #c31e2d; font-weight: bold;">Contact Us &#xBB;</a> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <a href="http://www.facebook.com/GCIAK" style="color: #c31e2d; font-weight: bold;"><img src="{!URLFOR($Resource.styleResources, 'images/facebook.gif')}" alt="Facebook" width="24" height="18" align="middle" class="icon" border="0" style="position: relative; top: -5px;" /></a><a href="http://twitter.com/GCIAK" style="color: #c31e2d; font-weight: bold;"><img src="{!URLFOR($Resource.styleResources, 'images/twitter.gif')}" alt="Twitter" width="24" height="18" align="middle" class="icon" border="0" style="position: relative; top: -5px;" /></a> <span class="follow" style="font-weight: bold;">Follow Us</span></p>
+                                <img src="{!URLFOR($Resource.styleResources, 'images/blank.gif')}" height="32" width="460" class="spacer" style="display: block;" /></td>
+                            </tr></table></td>
+                </tr><tr><td style="color: #767676; font-family: Arial, sans-serif; font-size: 12px; line-height: 18px;"><img src="{!URLFOR($Resource.styleResources, 'images/footer.jpg')}" alt="" width="584" height="22" border="0" /></td>
+                </tr></table></td>
+    </tr></table></body>
+</html>
+</apex:page>
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

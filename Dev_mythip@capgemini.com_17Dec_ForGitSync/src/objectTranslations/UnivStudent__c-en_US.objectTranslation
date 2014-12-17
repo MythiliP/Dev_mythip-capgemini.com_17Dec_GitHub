@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>UnivStudent</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>UnivStudents</value>
+    </caseValues>
+    <fields>
+        <label><!-- Average --></label>
+        <name>Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Course Days --></label>
+        <name>Course_Days__c</name>
+        <picklistValues>
+            <masterLabel>Friday</masterLabel>
+            <translation><!-- Friday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monday</masterLabel>
+            <translation><!-- Monday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saturday</masterLabel>
+            <translation><!-- Saturday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sunday</masterLabel>
+            <translation><!-- Sunday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thursday</masterLabel>
+            <translation><!-- Thursday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tuesday</masterLabel>
+            <translation><!-- Tuesday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wednesday</masterLabel>
+            <translation><!-- Wednesday --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Discount % --></label>
+        <name>Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Education Mode --></label>
+        <name>Education_Mode__c</name>
+        <picklistValues>
+            <masterLabel>Full Time</masterLabel>
+            <translation><!-- Full Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Part Time</masterLabel>
+            <translation><!-- Part Time --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- English --></label>
+        <name>English__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maths --></label>
+        <name>Maths__c</name>
+    </fields>
+    <fields>
+        <label><!-- Science --></label>
+        <name>Science__c</name>
+    </fields>
+    <fields>
+        <label><!-- Student Id --></label>
+        <name>Student_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Student Name --></help>
+        <label><!-- Student Name --></label>
+        <name>Student_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Marks --></label>
+        <name>Total_Marks__c</name>
+    </fields>
+    <fields>
+        <label><!-- isActive --></label>
+        <name>isActive__c</name>
+    </fields>
+    <layouts>
+        <layout>UnivStudent Layout</layout>
+        <sections>
+            <label><!-- Course Details --></label>
+            <section>Course Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>UnivStudentForStudent</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Fulltime Student --></label>
+        <name>Fulltime_Student</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Parttime Student --></label>
+        <name>Parttime_Student</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Staff --></label>
+        <name>Staff</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

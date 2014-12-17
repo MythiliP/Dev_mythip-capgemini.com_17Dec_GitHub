@@ -1,0 +1,11 @@
+<apex:page controller="AccConController">
+<apex:form >
+Account Name :<apex:inputtext value="{!wrpObj.accName}"/><br/>
+Account Number :<apex:inputtext value="{!wrpObj.accNumber}"/><br/>
+Account Phone :<apex:inputtext value="{!wrpObj.accPhone}"/><br/>
+Account Attendance :<apex:inputtext value="{!wrpObj.accAttendance}"/><br/>
+Contact Name :<apex:inputtext value="{!wrpObj.conName}"/><br/>
+Contact Department :<apex:inputtext value="{!wrpObj.conDept}"/><br/>
+<apex:commandButton value="Save" action="{!SaveAccCon}"/>
+ </apex:form>
+</apex:page>

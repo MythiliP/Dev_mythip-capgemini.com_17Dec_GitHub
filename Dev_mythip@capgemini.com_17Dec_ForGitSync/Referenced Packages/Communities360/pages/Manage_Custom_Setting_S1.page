@@ -1,0 +1,18 @@
+<apex:page standardcontroller="CMF__CMLeadSetting__c" extensions="CMF.CVFCManage_custom_set" docType="html-5.0" sidebar="false" showHeader="false"  standardStylesheets="false">
+
+<!-- JavaScript files -->  
+<apex:includescript value="//code.jquery.com/jquery-1.10.2.min.js" />
+ <!--  <apex:includescript value="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.2.min.js"/> -->
+<apex:stylesheet value="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+<apex:includescript value="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js" />
+<apex:form >
+  
+<apex:pageBlock title="LeadPal Setting Information"  >
+<apex:pageBlockSection > 
+<apex:inputField id="icbloggedinUser" value="{!cls.CMF__Logged_in_User_For_Conversion__c}" />
+ </apex:pageBlockSection> 
+	<apex:commandButton value="Save" action="{!saveChange}"/>
+</apex:pageBlock> 
+</apex:form>
+
+</apex:page>

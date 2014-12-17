@@ -1,0 +1,22 @@
+<apex:page sidebar="false" showHeader="false" controller="SearchAccController">
+<apex:form >
+
+
+<apex:outputLabel value="Account Name" ></apex:outputLabel>
+ <apex:inputText value="{!searchAcc}"/>
+<apex:commandButton value="Display Opportunities" action="{!search}" rerender="pgblk"/>
+
+
+
+<apex:pageblock id="pgblk">
+
+<apex:pageblockTable value="{!oppList}" var="acc" border="1">
+<apex:column value="{!acc.Name}" headerValue="Opp Name"/>
+<apex:column value="{!acc.CloseDate}" headerValue="Opp Closed Date"/>
+<apex:column value="{!acc.StageName}" headerValue="Opp Stage Name"/>
+<apex:column value="{!acc.ForecastCategory}" headerValue="Opp Forecast Category"/>
+</apex:pageblockTable>
+
+</apex:pageblock>
+</apex:form>
+ </apex:page>

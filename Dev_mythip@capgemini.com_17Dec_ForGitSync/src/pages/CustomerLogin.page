@@ -1,0 +1,9 @@
+<apex:page showheader="false" controller="CustomerDetails">
+<apex:form >
+<apex:inputText value="{!username}" id="theTextInput"/>
+<apex:inputSecret value="{!password}" id="theSecretInput"/>
+<apex:inputHidden value="{!firstName}" id="theHiddenInput"/>
+<apex:commandButton action="{!redirect}" value="Login" id="theButton"/>
+<apex:commandButton action="{!redirectToNewUser}" value="New User" id="theButton1"/>
+</apex:form>
+</apex:page>

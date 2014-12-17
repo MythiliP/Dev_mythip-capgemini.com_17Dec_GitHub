@@ -1,0 +1,23 @@
+<apex:page controller="SaveEmployeeDetails" showheader="false" sidebar="false" id="pg">
+<script>
+function jsFunction(){
+    var aa=document.getElementById('pg:form:bonus').value;
+   
+   if(aa==null || aa==''){
+       alert('Bonus is Blank');
+   } else{
+      test();
+      }
+}
+</script>
+<apex:form id="form">
+
+ Employee Name : <apex:inputText value="{!empName}"/><br/>
+ Bonus : <apex:inputtext value="{!bonus}" id="bonus"/><br/>
+ Department : <apex:inputtext value="{!department}"/><br/>
+ Salary : <apex:inputtext value="{!salary}"/><br/>
+ <apex:actionFunction name="test" action="{!saveEmp}">
+ <apex:commandButton value="Save" onclick="jsFunction();"/>
+ </apex:actionfunction>
+ </apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+<apex:page showHeader="false" sidebar="false" controller="ContactController">
+<apex:form >
+  Contact Name : <apex:inputText value="{!conName}"/>
+  <apex:commandButton value="Search" action="{!searchContact}"/>
+  
+  <apex:dataTable value="{!conList}" var="con" border="1">
+  <apex:column value="{!con.Name}" headerValue="Name"/>
+  <apex:column value="{!con.Department}" headerValue="Department"/>
+  <apex:column value="{!con.MobilePhone}" headerValue="Mobile Phone"/>
+  <apex:column value="{!con.Description}" headerValue="Description"/>
+    <apex:column value="{!con.Languages__c }" headerValue="Languages"/>
+    <apex:column value="{!con.Account.Name }" headerValue="Account Name"/>
+    <apex:column value="{!con.Account.Industry }" headerValue="Account Industry"/>
+        <apex:column value="{!con.Account.Active__c}" headerValue="Account Active"/>
+  </apex:dataTable>
+  </apex:form>
+</apex:page>

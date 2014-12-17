@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>JnJTask</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>JnJTasks</value>
+    </caseValues>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ENT Type --></label>
+        <name>ENT_Type__c</name>
+        <picklistValues>
+            <masterLabel>test</masterLabel>
+            <translation><!-- test --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number --></label>
+        <name>Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phase --></label>
+        <name>Phase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Qrtly Revenue Growth --></label>
+        <name>Qrtly_Revenue_Growth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quarter --></label>
+        <name>Quarter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Results in number of Qrtly cases --></label>
+        <name>Results_in_number_of_Qrtly_cases__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Group --></label>
+        <name>Task_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tasks --></label>
+        <name>Tasks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tier --></label>
+        <name>Tier__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Job Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Job Applications</value>
+    </caseValues>
+    <fields>
+        <label><!-- Average Review Score --></label>
+        <name>Average_Review_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate --></label>
+        <name>Candidate__c</name>
+        <relationshipLabel><!-- Job Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Competency Rating --></label>
+        <name>Competency_Rating__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Joining --></label>
+        <name>Date_of_Joining__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max_CulturalFit --></label>
+        <name>Max_CulturalFit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of job app --></label>
+        <name>Number_of_job_app__c</name>
+    </fields>
+    <fields>
+        <label><!-- Position --></label>
+        <name>Position__c</name>
+        <relationshipLabel><!-- Job Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rating --></label>
+        <name>Rating__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>Interviews completed</masterLabel>
+            <translation><!-- Interviews completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preparing offer</masterLabel>
+            <translation><!-- Preparing offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Approval</masterLabel>
+            <translation><!-- In Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Review Score --></label>
+        <name>Total_Review_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Reviews --></label>
+        <name>Total_Reviews__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total no of reviews --></label>
+        <name>Total_no_of_reviews__c</name>
+    </fields>
+    <layouts>
+        <layout>Job Application Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Job Application Layout-HR:Manager</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Job Application Layout-Supervisor</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Manager --></label>
+        <name>Manager</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Supervisor --></label>
+        <name>Supervisor</name>
+    </recordTypes>
+    <sharingReasons>
+        <label><!-- Share --></label>
+        <name>Share</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Change of reviews not allowed --></errorMessage>
+        <name>No_Delete_or_Insert_Reviews</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Role Name is mandatory. --></errorMessage>
+        <name>RoleName_Required</name>
+    </validationRules>
+    <workflowTasks>
+        <name>Notify_reg_offer_coming</name>
+        <subject><!-- Notify  reg offer coming --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Notify_reg_offer_coming1</name>
+        <subject><!-- Notify  reg offer coming1 --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

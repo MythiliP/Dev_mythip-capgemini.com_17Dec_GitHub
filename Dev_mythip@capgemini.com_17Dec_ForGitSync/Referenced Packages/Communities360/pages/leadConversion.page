@@ -1,0 +1,212 @@
+<!-- VF page to convert Leads -->
+<apex:page standardcontroller="Lead" extensions="CMF.CVFC_Ext_LeadConversion" id="leadConversionPage" >
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<style>
+    .accSelectandlookup
+    {
+    position: absolute;    
+    top: 0px; 
+    left: 0px;
+    
+    }
+    
+    </style>    
+ 
+<apex:messages id="messagesid"/> 
+<script>
+    
+    $(document).ready(function () {
+    //Find all input textbox which has accountlookup in its id
+        $('input[id$="accountLookup"]').each(function (i)
+        {
+            $(this).css({opacity:0.1});  // reduce the opacity to make them invisible
+            $(this).css("width","250px"); 
+        }); 
+        
+       
+        var accid ='';
+        var accname='';
+        var selects;
+        
+        
+        function timeout_trigger() {
+        	$(this).closest("div").find("input[type='hidden']").each(function(){
+    		 if($(this).attr('id').indexOf("lkid") > -1){
+                    accid = $(this).val();
+                    
+                    selects = $(this).closest('div').find('.accSelectandlookup') ;
+                    //Check if the accid is already present in the selectoptions and if not then add  
+                       if (!selects.find('option[value="' + accid + '"]').length) {
+                        selects.append('<option value="' + accid + '"selected="selected">Attach to Existing : ' + accname + '</option>');
+                        $('input[id$="selectedItemHidden"]').val($(this).val());
+                        }
+                    }  
+		
+		});
+		}
+
+		
+       
+        $('input[id$="accountLookup"]').change(function() {
+        	var element = this;
+        	accname= $(this).val();
+     		setTimeout(function () { timeout_trigger.call(element) }, 1000);
+        	
+        }); 
+       /* $('input[id$="accountLookup"]').blur(function() {
+            accname = $(this).val()
+            $(this).closest("div").find("input[type='hidden']").each(function(){
+                //alert($(this).attr('id') + ' on blur ' + $(this).val());
+                if($(this).attr('id').indexOf("lkid") > -1){
+                    accid = $(this).val();
+                    
+                    selects = $(this).closest('div').find('.accSelectandlookup') ;
+                    //Check if the accid is already present in the selectoptions and if not then add  
+                       if (!selects.find('option[value="' + accid + '"]').length) {
+                        selects.append('<option value="' + accid + '"selected="selected">Attach to Existing : ' + accname + '</option>');
+                        $('input[id$="selectedItemHidden"]').val($(this).val());
+                        }
+                    }
+                    //alert('accid = '+ accid);
+                    //alert('accname = '+ accname);
+                
+            }); 
+        }); 
+        */
+        
+       $('select[class$="accSelectandlookup"]').change(function() { 
+        $('input[id$="selectedItemHidden"]').val($(this).val());
+       // alert('Hidden field ' + $('input[id$="selectedItemHidden"]').val());
+       }); 
+        
+        
+        
+        function getInputValue(endWith) {
+             return $('input[id$="' + endWith + '"]').val();   
+            } 
+        
+      });
+    
+    
+   
+</script>   
+  
+<apex:sectionHeader title="{!lead.name}" subtitle="Convert Lead " description="Leads can be converted to accounts, contacts, and followup Events.<br/>
+You should only convert a lead once you have identified it as qualified.<br/>
+After this lead has been converted, it can no longer be viewed or edited as a lead, but can be viewed in lead reports."/>
+<apex:form id="leadConversionForm">  
+
+    <apex:pageBlock id="pBConvertLead" >
+        <apex:pageBlockButtons id="pbbConvertLead">  
+            <apex:commandButton action="{!convert}" value="Convert" id="cbConvert"  />
+            <apex:commandButton action="{!cancel}" value="Cancel" id="cbCancel"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection columns="1" title="Convert Lead" id="pbSectionLeadSection">
+            <apex:pageBlockSectionItem id="pbsiRecordOwner">
+                <apex:outputlabel value="Record Owner" id="lbRecordOwner" />
+                <apex:inputfield value="{!led.ownerId}"  id="ifRecordOwner"/>
+            </apex:pageBlockSectionItem>
+            
+            
+            <apex:pageBlockSectionItem id="pbsiemailOwner">
+                <apex:outputlabel value="Send Email to Owner" id="lbsendemailOwner" />
+                <apex:inputcheckbox value="{!emailtoowner}"  id="icbemailtoOwner"/>
+            </apex:pageBlockSectionItem>
+            
+            <!--  <apex:pageBlockSectionItem id="pbsiAccountName">
+                <apex:outputlabel value="Account Name" id="lbAccountName"/>
+                <apex:inputfield value="{!led.Account__c}" id="ifAccountName"/>
+            </apex:pageBlockSectionItem> -->
+             
+            <apex:pageBlockSectionItem id="pbsiAccountName">
+                <apex:outputlabel value="Account Name" id="lbAccountName"/>
+                <apex:outputPanel id="optableAccount" style="position:relative" layout="block">
+                <apex:inputfield value="{!ct.AccountId}" id="accountLookup" styleClass="accClass"/>
+                <!--  <apex:selectList id="selectedAccountId" value="{!selectedAccount}" size="1" styleClass="accSelectandlookup" style="width:250px" >
+                    <apex:selectOptions value="{!AccountList}"/> 
+                </apex:selectList>-->
+                <select id="someList"  Class="accSelectandlookup" style="width:250px">
+                    <option value="000000000000000000">Create New Account:  {!led.company}</option>
+                    <apex:repeat value="{!accList}" var="a">
+                        <option value="{!a.id}">Attach to Existing : {!a.name}</option>
+                    </apex:repeat>
+                </select>
+                <apex:inputHidden value="{!selectedAccounta}" id="selectedItemHidden"/>
+                </apex:outputPanel>      
+            </apex:pageBlockSectionItem>
+           <!--  Commented out by Pradip May 17 2013
+            <apex:pageBlockSectionItem id="pbsiAccountName2">
+                        <apex:outputlabel value="Account Name2" id="lbAccountName2"/>
+                        <apex:inputfield value="{!led.Account__c}"  id="lookedupaccount"/>
+            </apex:pageBlockSectionItem> 
+            -->
+            <apex:pageBlockSectionItem id="pbsiOpportunity">
+                <apex:outputlabel value="Opportunity Name" id="lboppName" />
+                <apex:outputLabel >
+                <apex:inputText value="{!oppName}"  id="oppName"/><br/>
+                <apex:inputcheckbox value="{!donotCreateOpp}"  id="icDNCOpp"/> <apex:outputText value="Do not create a new opportunity upon conversion" />
+                </apex:outputLabel>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem id="pbsiConvertedStatus">
+            
+                 <apex:outputlabel value="Converted Status"  id="lblConvertedStatus" /> 
+                <apex:selectList id="selectconvertedStatus" value="{!status}" size="1" styleClass="convstatus" onclick="setconvstatus(this.value)" >
+                    <apex:selectOptions value="{!convertedStatusList}"/>
+                </apex:selectList>
+                
+                
+                
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="2" title="Task Information" id="pbSectionTaskSection">
+                 <apex:pageBlockSectionItem id="pbsiSubject">
+                    <apex:outputlabel value="Subject"  id="lblSubject"/> 
+                    <apex:inputfield value="{!tsk.subject}"  id="subject" />
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem id="pbsiStatus">
+                    <apex:outputlabel value="Status"  id="lblStatus"/> 
+                    <apex:inputfield value="{!tsk.Status}"  id="status"/>
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem id="pbsiDueDate">
+                    <apex:outputlabel value="Due Date"  id="lblDueDate"/> 
+                    <apex:inputfield value="{!tsk.ActivityDate}"  id="DueDate"/>
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem id="pbsiPriority">
+                    <apex:outputlabel value="Priority"  id="lblpriority"/> 
+                    <apex:inputfield value="{!tsk.Priority}"  id="priority"/>
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                 </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" title="Description Information" id="pbSectionDescSection">
+                 <apex:pageBlockSectionItem id="pbsiComments">
+                    <apex:outputlabel value="Comments"  id="lblcomments"/> 
+                    <apex:inputfield value="{!tsk.Description}"  id="desc"/>
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem id="notifications"> 
+                    <apex:outputlabel value="Send Notification Email" id="lblNotification" />
+                    <apex:inputcheckbox value="{!emailnotif}"  id="icbemailNotif"/>
+                 </apex:pageBlockSectionItem>
+            </apex:pageBlockSection> 
+             
+            <apex:pageBlockSection columns="1" title="Reminder Information" id="pbSectionRemSection">
+                 <apex:pageBlockSectionItem id="pbsiReminder">
+                    <apex:outputlabel value="Reminder"  id="lblreminder"/> 
+                    <apex:outputPanel id="opRem">
+                        <apex:inputcheckbox value="{!tsk.IsReminderSet}"  id="icbemailremin"/>
+                        <apex:inputText value="{!remDate}"  id="rem" onfocus="DatePicker.pickDate(false, 'leadConversionPage:leadConversionForm:pBConvertLead:pbSectionRemSection:pbsiReminder:rem', false);" />
+                        <apex:selectList id="StartTime" value="{!startTime}" size="1">
+                            <apex:selectOptions value="{!timeList}"/>
+                        </apex:selectList>
+                    </apex:outputPanel>
+                 </apex:pageBlockSectionItem>
+                 
+            </apex:pageBlockSection> 
+   </apex:pageBlock>
+</apex:form>
+
+
+</apex:page>

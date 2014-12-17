@@ -1,0 +1,17 @@
+<apex:page controller="berry_alerttestController">
+ <apex:form >
+    test: <apex:inputtext value="{!berryStatic.test}"/>
+     <apex:commandButton value="Save" onclick="remoteTest(); return false;"/>
+     <apex:actionFunction name="testt" action="{!saveDb}" reRender=""/>
+     <apex:actionFunction name="testz" action="{!redirectToPage1}"/>
+      <script type="text/javascript">
+                function remoteTest() 
+                {
+                   var aa=testt();
+                   var bb='tefsdfsd';
+                   alert(bb);
+                   testz();
+                }
+    </script>
+ </apex:form>
+</apex:page>

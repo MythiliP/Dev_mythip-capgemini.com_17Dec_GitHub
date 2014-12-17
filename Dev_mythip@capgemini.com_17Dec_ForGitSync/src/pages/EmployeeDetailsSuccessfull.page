@@ -1,0 +1,15 @@
+<apex:page standardStylesheets="false" showHeader="false" controller="Employee">
+<h1>Successfully Saved!!</h1>
+<apex:form >
+<apex:outputLabel value="Employee Id"/>&nbsp;
+<apex:outputText value="{!empId}"/><br/><br/>
+<apex:outputLabel value="Employee Name"/>&nbsp;
+<apex:outputText value="{!empName}"/><br/><br/>
+<apex:outputLabel value="Employee Address"/>&nbsp;
+<apex:outputText value="{!empAddress}"/><br/><br/>
+<apex:outputLabel value="Employee Department"/>&nbsp;
+<apex:outputText value="{!empDepartment}"/><br/><br/>
+<apex:outputLabel value="Employee Salary"/>&nbsp;
+<apex:outputText value="{!empSalary}"/>
+</apex:form>
+</apex:page>

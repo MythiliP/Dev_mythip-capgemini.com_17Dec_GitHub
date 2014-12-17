@@ -1,0 +1,12 @@
+<apex:page controller="CMF.ctrl_ProfilePicture">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+  
+  <apex:form >
+      <apex:image value="{!Photolink}" width="100px"/>
+      <apex:outputLabel value="{!ProfileName }"></apex:outputLabel>
+  </apex:form>
+  
+</apex:page>

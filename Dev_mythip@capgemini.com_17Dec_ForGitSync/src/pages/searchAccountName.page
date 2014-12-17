@@ -1,0 +1,7 @@
+<apex:page controller="SearchAccName">
+<apex:form >
+Account Name<apex:inputtext value="{!accName}"/>
+<apex:commandButton value="Search" action="{!searchAcc}"/>
+<apex:outputText value="{!display}"></apex:outputText>
+  </apex:form>
+</apex:page>

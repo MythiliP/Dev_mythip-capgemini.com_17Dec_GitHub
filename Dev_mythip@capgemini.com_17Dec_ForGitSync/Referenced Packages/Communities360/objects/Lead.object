@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IsUnreadByOwner__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>LeadPalIsUnreadByOwner</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <webLinks>
+        <fullName>Bulk_Convert_Leads</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Bulk Lead Convert</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT (&quot;/soap/ajax/13.0/connection.js&quot;)}
+var records = {!GETRECORDIDS($ObjectType.Lead)};
+var toconvertLeadIds=[];
+
+if (records.length &lt;1)
+{
+alert(&apos;Pls select atleast 1 record for conversion&apos;);
+}
+else
+{
+if(records.length &gt; 75)
+{
+   alert(&apos;Only a maximum of 75 Leads can be processed for conversion at one instance. All Leads upto the 75th Lead would be processed and rest would have to be selected again for conversion&apos;);
+}
+for (var n=0; n&lt;records.length; n++) {
+if(n &lt; 75)
+{
+   toconvertLeadIds[n]=records[n];
+}
+}
+
+var url = &apos;/apex/CMF__massConvertwithinputs?toconvertLeadIds=&apos;+toconvertLeadIds
+window.location.href=url;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Convert_Lead</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>1 Click Lead Convert</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT (&quot;/soap/ajax/13.0/connection.js&quot;)}
+var records = {!GETRECORDIDS($ObjectType.Lead)};
+var toconvertLeadIds=[];
+
+if (records.length &lt;1)
+{
+   alert(&apos;Pls select atleast 1 record for conversion&apos;);
+}
+else
+{
+if(records.length &gt; 75)
+{
+   alert(&apos;Only a maximum of 75 Leads can be processed for conversion at one instance. All Leads upto the 75th Lead would be processed and rest would have to be selected again for conversion&apos;);
+}
+for (var n=0; n&lt;records.length; n++) {
+if(n &lt; 75)
+{
+   toconvertLeadIds[n]=records[n];
+}
+} 
+
+var url = &apos;/apex/CMF__massConvert?toconvertLeadIds=&apos;+toconvertLeadIds
+window.location.href=url;
+}</url>
+    </webLinks>
+</CustomObject>

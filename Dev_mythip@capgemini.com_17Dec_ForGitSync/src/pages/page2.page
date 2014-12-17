@@ -1,0 +1,8 @@
+<apex:page showHeader="false" standardStylesheets="false" controller="RedirectToPage2">
+<apex:form >
+<apex:outputLabel value="Name"/>
+<apex:outputText value="{!name}"/>
+<apex:outputLabel value="Age"/>
+<apex:outputText value="{!age}"/>
+</apex:form>
+</apex:page>

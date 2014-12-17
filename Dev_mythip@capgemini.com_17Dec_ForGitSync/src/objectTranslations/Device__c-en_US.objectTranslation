@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Device</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Devices</value>
+    </caseValues>
+    <fields>
+        <label><!-- Dealers --></label>
+        <name>Dealers__c</name>
+        <picklistValues>
+            <masterLabel>Adishwar</masterLabel>
+            <translation><!-- Adishwar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sangeetha</masterLabel>
+            <translation><!-- Sangeetha --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Staples</masterLabel>
+            <translation><!-- Staples --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Viveks</masterLabel>
+            <translation><!-- Viveks --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter device ID --></help>
+        <label><!-- Device ID --></label>
+        <name>Device_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Device Name --></label>
+        <name>Device_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Device Type --></label>
+        <name>Device_Type__c</name>
+        <picklistValues>
+            <masterLabel>Feature Phone</masterLabel>
+            <translation><!-- Feature Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Smart Phone</masterLabel>
+            <translation><!-- Smart Phone --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

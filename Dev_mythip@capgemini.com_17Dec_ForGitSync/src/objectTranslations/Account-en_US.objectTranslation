@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Account</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Account</value>
+    </caseValues>
+    <fields>
+        <label><!-- Also Known As --></label>
+        <name>AKA_FKA_DBA__c</name>
+    </fields>
+    <fields>
+        <name>AccountSource</name>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner Referral</masterLabel>
+            <translation><!-- Partner Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone Inquiry</masterLabel>
+            <translation><!-- Phone Inquiry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchased List</masterLabel>
+            <translation><!-- Purchased List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Internal</masterLabel>
+            <translation><!-- Seminar - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Partner</masterLabel>
+            <translation><!-- Seminar - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account Currency --></label>
+        <name>Account_Currency__c</name>
+        <picklistValues>
+            <masterLabel>AUS</masterLabel>
+            <translation><!-- AUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN</masterLabel>
+            <translation><!-- CAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GBP</masterLabel>
+            <translation><!-- GBP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USD</masterLabel>
+            <translation><!-- USD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account ID SFDC 18digit --></label>
+        <name>Account_ID_SFDC_18digit_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account NPS Average Score --></label>
+        <name>Account_NPS_Average_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account TestCode --></label>
+        <name>Account_TestCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Affiliation --></label>
+        <name>Affiliation__c</name>
+        <picklistValues>
+            <masterLabel>AIDS Services</masterLabel>
+            <translation><!-- AIDS Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALS</masterLabel>
+            <translation><!-- ALS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accounting Firm/CPA</masterLabel>
+            <translation><!-- Accounting Firm/CPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertising</masterLabel>
+            <translation><!-- Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>African Methodist Episcopal</masterLabel>
+            <translation><!-- African Methodist Episcopal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agricultural</masterLabel>
+            <translation><!-- Agricultural --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aircraft &amp; Aerospace</masterLabel>
+            <translation><!-- Aircraft &amp; Aerospace --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alumni Association</masterLabel>
+            <translation><!-- Alumni Association --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alzheimer&apos;s Associations</masterLabel>
+            <translation><!-- Alzheimer&apos;s Associations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>American Diabetes Assoc</masterLabel>
+            <translation><!-- American Diabetes Assoc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>American Liver Foundation</masterLabel>
+            <translation><!-- American Liver Foundation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>American Lung Association</masterLabel>
+            <translation><!-- American Lung Association --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Art/Arts School</masterLabel>
+            <translation><!-- Art/Arts School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arthritis Foundation</masterLabel>
+            <translation><!-- Arthritis Foundation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assembly of God</masterLabel>
+            <translation><!-- Assembly of God --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assoc. of Professionals</masterLabel>
+            <translation><!-- Assoc. of Professionals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Association of Retarded Citizens</masterLabel>
+            <translation><!-- Association of Retarded Citizens --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Athletic Department</masterLabel>
+            <translation><!-- Athletic Department --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Autism</masterLabel>
+            <translation><!-- Autism --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking Services</masterLabel>
+            <translation><!-- Banking Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baptist</masterLabel>
+            <translation><!-- Baptist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blind/Vision</masterLabel>
+            <translation><!-- Blind/Vision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boarding School</masterLabel>
+            <translation><!-- Boarding School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brain Injury Association</masterLabel>
+            <translation><!-- Brain Injury Association --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brethren</masterLabel>
+            <translation><!-- Brethren --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPA Affiliated Accounting Software Reseller</masterLabel>
+            <translation><!-- CPA Affiliated Accounting Software Reseller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CUNY</masterLabel>
+            <translation><!-- CUNY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calvinist</masterLabel>
+            <translation><!-- Calvinist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancer Treatment</masterLabel>
+            <translation><!-- Cancer Treatment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catholic</masterLabel>
+            <translation><!-- Catholic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cerebral Palsy Associations</masterLabel>
+            <translation><!-- Cerebral Palsy Associations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charter School</masterLabel>
+            <translation><!-- Charter School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemicals</masterLabel>
+            <translation><!-- Chemicals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Children&apos;s Hospital</masterLabel>
+            <translation><!-- Children&apos;s Hospital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Children&apos;s Miracle Network</masterLabel>
+            <translation><!-- Children&apos;s Miracle Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Christian (no specific denomination)</masterLabel>
+            <translation><!-- Christian (no specific denomination) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Church of Christ</masterLabel>
+            <translation><!-- Church of Christ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College</masterLabel>
+            <translation><!-- College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer-Related</masterLabel>
+            <translation><!-- Computer-Related --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Products</masterLabel>
+            <translation><!-- Consumer Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crohn&apos;s and Colitis</masterLabel>
+            <translation><!-- Crohn&apos;s and Colitis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cystic Fibrosis</masterLabel>
+            <translation><!-- Cystic Fibrosis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deaf/Hearing</masterLabel>
+            <translation><!-- Deaf/Hearing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diabetes (American/Juv.)</masterLabel>
+            <translation><!-- Diabetes (American/Juv.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>District</masterLabel>
+            <translation><!-- District --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diversified Services</masterLabel>
+            <translation><!-- Diversified Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drug/Alcohol Treatment</masterLabel>
+            <translation><!-- Drug/Alcohol Treatment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Easter Seals</masterLabel>
+            <translation><!-- Easter Seals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ecumenical</masterLabel>
+            <translation><!-- Ecumenical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education - Fnd/Acad/Institute</masterLabel>
+            <translation><!-- Education - Fnd/Acad/Institute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Epilepsy Foundation</masterLabel>
+            <translation><!-- Epilepsy Foundation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Episcopal</masterLabel>
+            <translation><!-- Episcopal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Services/Accounting</masterLabel>
+            <translation><!-- Financial Services/Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food &amp; Beverage</masterLabel>
+            <translation><!-- Food &amp; Beverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foundation</masterLabel>
+            <translation><!-- Foundation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Friends</masterLabel>
+            <translation><!-- Friends --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fuel</masterLabel>
+            <translation><!-- Fuel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gas &amp; Electric</masterLabel>
+            <translation><!-- Gas &amp; Electric --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greek Orthodox</masterLabel>
+            <translation><!-- Greek Orthodox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Related</masterLabel>
+            <translation><!-- Health Related --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Heart Associations</masterLabel>
+            <translation><!-- Heart Associations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Higher Ed</masterLabel>
+            <translation><!-- Higher Ed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Housing &amp; Real Estate</masterLabel>
+            <translation><!-- Housing &amp; Real Estate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International/English Speaking</masterLabel>
+            <translation><!-- International/English Speaking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investment Firm/Bank</masterLabel>
+            <translation><!-- Investment Firm/Bank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Islamic</masterLabel>
+            <translation><!-- Islamic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jewish</masterLabel>
+            <translation><!-- Jewish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kidney Foundation</masterLabel>
+            <translation><!-- Kidney Foundation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law Firm/Lawyer</masterLabel>
+            <translation><!-- Law Firm/Lawyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law School</masterLabel>
+            <translation><!-- Law School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Learning Center</masterLabel>
+            <translation><!-- Learning Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Learning Disabled/Retarded</masterLabel>
+            <translation><!-- Learning Disabled/Retarded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leukemia Society</masterLabel>
+            <translation><!-- Leukemia Society --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Library</masterLabel>
+            <translation><!-- Library --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lutheran</masterLabel>
+            <translation><!-- Lutheran --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manufacturing</masterLabel>
+            <translation><!-- Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>March of Dimes</masterLabel>
+            <translation><!-- March of Dimes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical School</masterLabel>
+            <translation><!-- Medical School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mennonite</masterLabel>
+            <translation><!-- Mennonite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mental Health</masterLabel>
+            <translation><!-- Mental Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Methodist</masterLabel>
+            <translation><!-- Methodist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Middle/Early College</masterLabel>
+            <translation><!-- Middle/Early College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Military School/College</masterLabel>
+            <translation><!-- Military School/College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mining</masterLabel>
+            <translation><!-- Mining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montessori</masterLabel>
+            <translation><!-- Montessori --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Motor Vehicles</masterLabel>
+            <translation><!-- Motor Vehicles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Muscular Dystrophy</masterLabel>
+            <translation><!-- Muscular Dystrophy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Music School</masterLabel>
+            <translation><!-- Music School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NCCJ</masterLabel>
+            <translation><!-- NCCJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Multiple Sclerosis</masterLabel>
+            <translation><!-- National Multiple Sclerosis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neurofibromotosis</masterLabel>
+            <translation><!-- Neurofibromotosis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nonsectarian</masterLabel>
+            <translation><!-- Nonsectarian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paper/Forest Products</masterLabel>
+            <translation><!-- Paper/Forest Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pentecostal</masterLabel>
+            <translation><!-- Pentecostal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Care/Cosmetics</masterLabel>
+            <translation><!-- Personal Care/Cosmetics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmaceuticals</masterLabel>
+            <translation><!-- Pharmaceuticals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planned Parenthood</masterLabel>
+            <translation><!-- Planned Parenthood --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presbyterian</masterLabel>
+            <translation><!-- Presbyterian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prevent Blindness</masterLabel>
+            <translation><!-- Prevent Blindness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Publishing &amp; Printing</masterLabel>
+            <translation><!-- Publishing &amp; Printing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quaker</masterLabel>
+            <translation><!-- Quaker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recording for the Blind</masterLabel>
+            <translation><!-- Recording for the Blind --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red Cross</masterLabel>
+            <translation><!-- Red Cross --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Religious - Other</masterLabel>
+            <translation><!-- Religious - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ronald McDonald House</masterLabel>
+            <translation><!-- Ronald McDonald House --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUNY</masterLabel>
+            <translation><!-- SUNY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seventh Day Adventist</masterLabel>
+            <translation><!-- Seventh Day Adventist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special/Disabled Education</masterLabel>
+            <translation><!-- Special/Disabled Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spina Bifida Association</masterLabel>
+            <translation><!-- Spina Bifida Association --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Susan Komen</masterLabel>
+            <translation><!-- Susan Komen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telephone/Telecommunications</masterLabel>
+            <translation><!-- Telephone/Telecommunications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation</masterLabel>
+            <translation><!-- Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unitarian</masterLabel>
+            <translation><!-- Unitarian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Negro College Fund</masterLabel>
+            <translation><!-- United Negro College Fund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VNA/VNS</masterLabel>
+            <translation><!-- VNA/VNS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VON</masterLabel>
+            <translation><!-- VON --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Alumni --></label>
+        <name>Alumni__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attendance --></label>
+        <name>Attendance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing County --></label>
+        <name>Billing_County__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Unit --></label>
+        <name>Business_Unit__c</name>
+        <picklistValues>
+            <masterLabel>ECBU</masterLabel>
+            <translation><!-- ECBU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GMBU</masterLabel>
+            <translation><!-- GMBU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IBU</masterLabel>
+            <translation><!-- IBU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Target</masterLabel>
+            <translation><!-- Target --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>CMF__Active__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Upsell Opportunity --></label>
+        <name>CMF__UpsellOpportunity__c</name>
+        <picklistValues>
+            <masterLabel>Maybe</masterLabel>
+            <translation><!-- Maybe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Carnegie Class --></label>
+        <name>Carnegie_Class__c</name>
+        <picklistValues>
+            <masterLabel>-1</masterLabel>
+            <translation><!-- -1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11</masterLabel>
+            <translation><!-- 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation><!-- 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13</masterLabel>
+            <translation><!-- 13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14</masterLabel>
+            <translation><!-- 14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16</masterLabel>
+            <translation><!-- 16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17</masterLabel>
+            <translation><!-- 17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18</masterLabel>
+            <translation><!-- 18 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19</masterLabel>
+            <translation><!-- 19 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20</masterLabel>
+            <translation><!-- 20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>21</masterLabel>
+            <translation><!-- 21 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>22</masterLabel>
+            <translation><!-- 22 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>23</masterLabel>
+            <translation><!-- 23 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24</masterLabel>
+            <translation><!-- 24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25</masterLabel>
+            <translation><!-- 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>26</masterLabel>
+            <translation><!-- 26 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>27</masterLabel>
+            <translation><!-- 27 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>28</masterLabel>
+            <translation><!-- 28 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>29</masterLabel>
+            <translation><!-- 29 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30</masterLabel>
+            <translation><!-- 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>31</masterLabel>
+            <translation><!-- 31 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>32</masterLabel>
+            <translation><!-- 32 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>33</masterLabel>
+            <translation><!-- 33 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Carnegie Description --></label>
+        <name>Carnegie_Description__c</name>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Charity Mission Statement --></label>
+        <name>Charity_Mission_Statement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Charity Status --></label>
+        <name>Charity_Status__c</name>
+        <picklistValues>
+            <masterLabel>501c3</masterLabel>
+            <translation><!-- 501c3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>501c4</masterLabel>
+            <translation><!-- 501c4 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contributions - Public Support --></label>
+        <name>Contributions_Public_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contributions - Special Events --></label>
+        <name>Contributions_Special_Events__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Terms --></label>
+        <name>Credit_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Priority --></label>
+        <name>CustomerPriority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+        <picklistValues>
+            <masterLabel>Archdiocese/Diocese</masterLabel>
+            <translation><!-- Archdiocese/Diocese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPA</masterLabel>
+            <translation><!-- CPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPA/VAR</masterLabel>
+            <translation><!-- CPA/VAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Church</masterLabel>
+            <translation><!-- Church --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College/University</masterLabel>
+            <translation><!-- College/University --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultant</masterLabel>
+            <translation><!-- Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Fnd./Contrib. Office</masterLabel>
+            <translation><!-- Corporate Fnd./Contrib. Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education--Fnd/Acad/Institute</masterLabel>
+            <translation><!-- Education- - Fnd/Acad/Institute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospice</masterLabel>
+            <translation><!-- Hospice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospital Foundation</masterLabel>
+            <translation><!-- Hospital Foundation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospital System</masterLabel>
+            <translation><!-- Hospital System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospital/Medical Center</masterLabel>
+            <translation><!-- Hospital/Medical Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT/System Integrator</masterLabel>
+            <translation><!-- IT/System Integrator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent Accounting Software VAR</masterLabel>
+            <translation><!-- Independent Accounting Software VAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent School</masterLabel>
+            <translation><!-- Independent School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jewish Federation</masterLabel>
+            <translation><!-- Jewish Federation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Junior/Tech./Comm. College</masterLabel>
+            <translation><!-- Junior/Tech./Comm. College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Research/Services</masterLabel>
+            <translation><!-- Medical Research/Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nursing</masterLabel>
+            <translation><!-- Nursing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Firms/Assoc.</masterLabel>
+            <translation><!-- Other Firms/Assoc. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public School</masterLabel>
+            <translation><!-- Public School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Religious Ministry/Missions</masterLabel>
+            <translation><!-- Religious Ministry/Missions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Religious--General Fnd./Assoc.</masterLabel>
+            <translation><!-- Religious- - General Fnd./Assoc. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminary/Theo. Seminary</masterLabel>
+            <translation><!-- Seminary/Theo. Seminary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special</masterLabel>
+            <translation><!-- Special --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Do Not Solicit --></label>
+        <name>Do_Not_Solicit__c</name>
+    </fields>
+    <fields>
+        <label><!-- EIN --></label>
+        <name>EIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment --></label>
+        <name>Enrollment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fiscal Year --></label>
+        <name>Fiscal_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Government Grants --></label>
+        <name>Government_Grants__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gross Annual Budget --></label>
+        <name>Gross_Annual_Budget__c</name>
+    </fields>
+    <fields>
+        <name>Industry</name>
+        <picklistValues>
+            <masterLabel>Agriculture</masterLabel>
+            <translation><!-- Agriculture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apparel</masterLabel>
+            <translation><!-- Apparel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking</masterLabel>
+            <translation><!-- Banking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biotechnology</masterLabel>
+            <translation><!-- Biotechnology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business/Corps.</masterLabel>
+            <translation><!-- Business/Corps. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemicals</masterLabel>
+            <translation><!-- Chemicals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communications</masterLabel>
+            <translation><!-- Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation><!-- Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics</masterLabel>
+            <translation><!-- Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy</masterLabel>
+            <translation><!-- Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental</masterLabel>
+            <translation><!-- Environmental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food &amp; Beverage</masterLabel>
+            <translation><!-- Food &amp; Beverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare</masterLabel>
+            <translation><!-- Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Higher Education</masterLabel>
+            <translation><!-- Higher Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospitality</masterLabel>
+            <translation><!-- Hospitality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Machinery</masterLabel>
+            <translation><!-- Machinery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manufacturing</masterLabel>
+            <translation><!-- Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media</masterLabel>
+            <translation><!-- Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not For Profit</masterLabel>
+            <translation><!-- Not For Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recreation</masterLabel>
+            <translation><!-- Recreation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Religious</masterLabel>
+            <translation><!-- Religious --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schools (K-12)</masterLabel>
+            <translation><!-- Schools (K-12) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipping</masterLabel>
+            <translation><!-- Shipping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology</masterLabel>
+            <translation><!-- Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telecommunications</masterLabel>
+            <translation><!-- Telecommunications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation</masterLabel>
+            <translation><!-- Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities</masterLabel>
+            <translation><!-- Utilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>test</masterLabel>
+            <translation><!-- test --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- K-12 School Level --></label>
+        <name>K_12_School_Level__c</name>
+        <picklistValues>
+            <masterLabel>Elementary School</masterLabel>
+            <translation><!-- Elementary School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High School</masterLabel>
+            <translation><!-- High School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Middle School,</masterLabel>
+            <translation><!-- Middle School, --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MSAA Date --></label>
+        <name>MSAA_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maintenance Package --></label>
+        <name>Maintenance_Package__c</name>
+    </fields>
+    <fields>
+        <label><!-- NTEE Category --></label>
+        <name>NTEE_Category__c</name>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NTEE Code --></label>
+        <name>NTEE_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Postal Mail --></label>
+        <name>No_Postal_Mail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Locations --></label>
+        <name>NumberofLocations__c</name>
+    </fields>
+    <fields>
+        <name>Ownership</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private</masterLabel>
+            <translation><!-- Private --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public</masterLabel>
+            <translation><!-- Public --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subsidiary</masterLabel>
+            <translation><!-- Subsidiary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Payer --></label>
+        <name>Payer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Productline --></label>
+        <name>Productline__c</name>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Rating</name>
+        <picklistValues>
+            <masterLabel>Cold</masterLabel>
+            <translation><!-- Cold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hot</masterLabel>
+            <translation><!-- Hot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm</masterLabel>
+            <translation><!-- Warm --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SLA Expiration Date --></label>
+        <name>SLAExpirationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA Serial Number --></label>
+        <name>SLASerialNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA --></label>
+        <name>SLA__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation><!-- Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platinum</masterLabel>
+            <translation><!-- Platinum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SLX Account ID --></label>
+        <name>SLX_Account_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping County --></label>
+        <name>Shipping_County__c</name>
+    </fields>
+    <fields>
+        <label><!-- Siteid --></label>
+        <name>Siteid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Family --></label>
+        <name>Solution_Area_of_Interest__c</name>
+        <picklistValues>
+            <masterLabel>Analytics</masterLabel>
+            <translation><!-- Analytics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application Hosting</masterLabel>
+            <translation><!-- Application Hosting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Marketing &amp; Data Services</masterLabel>
+            <translation><!-- Direct Marketing &amp; Data Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance &amp; Accounting</masterLabel>
+            <translation><!-- Finance &amp; Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundraising &amp; CRM</masterLabel>
+            <translation><!-- Fundraising &amp; CRM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interactive</masterLabel>
+            <translation><!-- Interactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance</masterLabel>
+            <translation><!-- Maintenance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional Services</masterLabel>
+            <translation><!-- Professional Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Information Management</masterLabel>
+            <translation><!-- Student Information Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ticketing</masterLabel>
+            <translation><!-- Ticketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Revenue --></label>
+        <name>Total_Revenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tuition --></label>
+        <name>Tuition__c</name>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Analyst</masterLabel>
+            <translation><!-- Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Channel Partner / Reseller</masterLabel>
+            <translation><!-- Channel Partner / Reseller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor</masterLabel>
+            <translation><!-- Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer - Channel</masterLabel>
+            <translation><!-- Customer - Channel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer - Direct</masterLabel>
+            <translation><!-- Customer - Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Installation Partner</masterLabel>
+            <translation><!-- Installation Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integrator</masterLabel>
+            <translation><!-- Integrator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investor</masterLabel>
+            <translation><!-- Investor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Press</masterLabel>
+            <translation><!-- Press --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect</masterLabel>
+            <translation><!-- Prospect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reseller</masterLabel>
+            <translation><!-- Reseller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology Partner</masterLabel>
+            <translation><!-- Technology Partner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Upsell Opportunity --></label>
+        <name>UpsellOpportunity__c</name>
+        <picklistValues>
+            <masterLabel>Maybe</masterLabel>
+            <translation><!-- Maybe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- eBus ID --></label>
+        <name>eBus_ID__c</name>
+    </fields>
+    <layouts>
+        <layout>Account (Marketing) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>zfsdg</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create CaseC --></label>
+        <name>Create_CaseC</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- xvsd --></label>
+        <name>xvsd</name>
+    </recordTypes>
+    <startsWith>Vowel</startsWith>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Account_Hierarchy --></label>
+        <name>AppShark_AH__Account_Hierarchy</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Billing --></label>
+        <name>Billing</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Financial_Profile --></label>
+        <name>Financial_Profile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map --></label>
+        <name>Map</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- News --></label>
+        <name>News</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- USPS --></label>
+        <name>USPS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+</CustomObjectTranslation>

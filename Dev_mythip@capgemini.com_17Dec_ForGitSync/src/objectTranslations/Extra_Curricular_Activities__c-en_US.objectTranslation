@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Extra Curricular Activities</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Extra Curricular Activities</value>
+    </caseValues>
+    <fields>
+        <label><!-- Activity Name --></label>
+        <name>Activity_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- UnivStudent --></label>
+        <name>UnivStudent__c</name>
+        <relationshipLabel><!-- Extra Curricular Activities --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,16 @@
+<apex:page controller="AccOpportunityController">
+<apex:form >
+<apex:pageBlock >
+
+Account Name : <apex:inputtext value="{!accName}"/><br/>
+<apex:commandButton value="Fetch Opportunities for this Account" action="{!fetchOpportunities}"/>
+<apex:pageBlockSection >
+<apex:pageBlockTable value="{!oppList}" var="opp">
+<apex:column value="{!opp.Name}" headerValue="Opportunity Name"/>
+<apex:column value="{!opp.CloseDate}" headerValue="Close Date"/>
+<apex:column value="{!opp.StageName}" headerValue="Stage"/>
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

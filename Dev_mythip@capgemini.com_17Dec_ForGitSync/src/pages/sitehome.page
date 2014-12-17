@@ -1,0 +1,22 @@
+<apex:page showHeader="false">
+<style>
+    .activeTab {background-color: #FF0066; color:white; background-image:none;display: block;height: 25px;}
+    .inactiveTab { background-color: #E0E0EB; color:black; background-image:none;display: block}
+    
+    </style>
+<div align="center">
+<apex:outputLink rendered="{!(ISPICKVAL($User.UserType,'Guest'))}">Sign In</apex:outputLink>
+</div>
+
+<apex:tabPanel switchType="client" selectedTab="name1" id="theTabPanel" tabClass="activeTab" inactiveTabClass="inactiveTab" width="80%">
+    <apex:tab label="Customer" name="name1" id="tabOne" style="background-color: #FFFFFF;">
+    <table  >
+    <tr><td border="1px solid black;">My cases</td>
+    <td border="1px solid black;">Idea</td></tr>
+    </table>
+    </apex:tab>
+    <apex:tab label="Sales Users" name="name2" id="tabTwo">content for tab two</apex:tab>
+    </apex:tabPanel>
+  <c:SiteLogin id="siteLogin" rendered="{!(ISPICKVAL($User.UserType,'Guest'))}"/>
+  <apex:outputLink value="{!$Site.Prefix}/secur/logout.jsp" rendered="{!NOT(ISPICKVAL($User.UserType,'Guest'))}">{!$Label.site.logout}</apex:outputLink>
+</apex:page>

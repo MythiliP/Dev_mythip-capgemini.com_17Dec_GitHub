@@ -1,0 +1,31 @@
+<apex:page standardcontroller="CMF__CMLeadSetting__c" extensions="CMF.CVFCManage_custom_set">
+  
+  <apex:form >
+  <apex:pageBlock title="LeadPal Settings" >
+      
+         <!--   <apex:pageBlockTable value="{!cml_list}" var="cml" >
+                              
+                <apex:column headerValue="Name" title="Name">   
+                              
+                 <apex:outputField value="{!cml.Name}"/>
+                </apex:column> 
+                 
+                <apex:column headerValue="Logged in User For Conversion" title="Logged in User For Conversion">                  
+                 <apex:inputField value="{!cml.Logged_in_User_For_Conversion__c}"/>                 
+              </apex:column>
+              
+                            
+          </apex:pageBlockTable>-->
+          <apex:pageblockSection title="LeadPal Setting Information" columns="1">
+                <apex:inputfield value="{!cls.CMF__Logged_in_User_For_Conversion__c}"  id="icbloggedinUser"/>	
+          </apex:pageblockSection>
+      
+      
+      
+      <apex:pageblockButtons >
+              <apex:commandButton value="Save" action="{!saveChange}"/> 
+              <apex:commandButton value="Cancel" action="{!Cancel}"/>         
+      </apex:pageblockButtons>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

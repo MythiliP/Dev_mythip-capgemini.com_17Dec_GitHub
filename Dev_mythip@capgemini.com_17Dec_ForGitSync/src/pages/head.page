@@ -1,0 +1,9 @@
+<apex:page standardStylesheets="false" showHeader="false">
+<head>
+<title>GCI</title>
+<meta charset="UTF-8" />
+<meta name="description" content="CGI" />
+<meta name="" content="GCI" />
+<apex:stylesheet value="{!URLFOR($Resource.styleResources, 'stylesheets/style.css')}"/>
+</head>
+</apex:page>

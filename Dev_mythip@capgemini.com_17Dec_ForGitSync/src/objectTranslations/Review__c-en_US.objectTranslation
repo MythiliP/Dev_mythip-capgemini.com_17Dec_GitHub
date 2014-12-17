@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Review</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Reviews</value>
+    </caseValues>
+    <fields>
+        <label><!-- Cultural Comments --></label>
+        <name>Cultural_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cultural Fit --></label>
+        <name>Cultural_Fit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Experience --></label>
+        <name>Experience__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interviewer --></label>
+        <name>Interviewer__c</name>
+        <relationshipLabel><!-- Reviews --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Job Application --></label>
+        <name>Job_Application__c</name>
+        <relationshipLabel><!-- Reviews --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Leadership Skills --></label>
+        <name>Leadership_Skills__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overall Score --></label>
+        <name>Overall_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason Recommended --></label>
+        <name>Reason_Recommended__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recommend for Hire --></label>
+        <name>Recommend_for_Hire__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage of Job App --></label>
+        <name>Stage_of_Job_App__c</name>
+    </fields>
+    <layouts>
+        <layout>Review Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Fill cultural commments --></errorMessage>
+        <name>Low_cultural_fit_req_explanation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Fill reason recommended --></errorMessage>
+        <name>Recommend_for_hire_req_exp</name>
+    </validationRules>
+</CustomObjectTranslation>

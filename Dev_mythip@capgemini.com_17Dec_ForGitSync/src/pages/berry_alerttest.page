@@ -1,0 +1,6 @@
+<apex:page controller="berry_alerttestController">
+ <apex:form >
+ Name: <apex:inputtext value="{!berryStatic.name}"/>
+ <apex:commandButton value="Next" action="{!redirectToPage2}"/>
+ </apex:form>
+</apex:page>

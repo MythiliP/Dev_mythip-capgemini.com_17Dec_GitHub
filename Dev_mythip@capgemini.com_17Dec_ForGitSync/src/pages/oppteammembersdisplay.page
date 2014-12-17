@@ -1,0 +1,8 @@
+<apex:page standardController="Opportunity" extensions="OpportunityTeamController">
+<apex:pagemessages ></apex:pagemessages>
+<apex:pageblock rendered="{!oppTeamList.size>0}">
+  <apex:pageblockTable value="{!oppTeamList}" var="opp">
+  <apex:column value="{!opp.UserId}"/>
+  </apex:pageblockTable>
+</apex:pageBlock>
+</apex:page>

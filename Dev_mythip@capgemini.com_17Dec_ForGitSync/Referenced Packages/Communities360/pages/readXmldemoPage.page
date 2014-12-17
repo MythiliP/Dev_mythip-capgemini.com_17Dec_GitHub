@@ -1,0 +1,66 @@
+<apex:page controller="CMF.readXmldemo">
+  
+  <apex:form >
+  <apex:message />
+  <apex:sectionHeader title="Upload Leads"/>
+      <apex:pagemessages />
+       <apex:pageBlock rendered="{!if(page == 'Page1',true,false)}" id="pbPage1">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Next" action="{!page1Next}"  /> 
+                
+            </apex:pageBlockButtons>
+             
+            <h2><apex:outputText value="Data Importer Instructions" /> </h2>
+            <br/><br/>
+           <h4>Welcome to Leads Data Importer. Please carefully read the instructions before this.  </h4>
+            <ol>
+               
+                
+                <li>
+                    The Data Importer allows a partner user to import leads from a csv file into the partner portal 
+                    <ol type="A">
+                        <li>Click&nbsp;<apex:outputLink value="{!DownloadLink}">here</apex:outputLink> to download the Lead CSV format template.</li>
+                        <li>The data contained in row 2 of the downloaded format template is included to show how data must appear in order for the Data Import to work.  Prior to upload, delete row 2.  </li>
+                        <li>Fill in the appropriate columns of the csv template with the data. Do not change the column position in the template. </li>
+                        <li>It is highly recommended you import a small test file of 2-3 records before importing all of your data to ensure that you have correctly prepared your import file. </li>
+                        <li>You are limited to 1,000 records in each import.  You may complete successive imports for records in excess of 1,000.  </li>
+                       
+                    </ol>  
+                </li>
+                
+            </ol>
+            
+       </apex:pageBlock>
+       
+       <apex:pageBlock rendered="{!if(page == 'Page2',true,false)}" id="pbPage2">
+        
+             <center>
+               <apex:inputFile value="{!contentFile}"/><apex:commandButton action="{!readCsv}" value="Upload" id="theButton" style="width:100px;"  />
+              <br/> <br/> <font color="red"> <b>Note: Please use the standard template to upload Lead. Click &nbsp;<apex:outputLink value="{!DownloadLink }">here</apex:outputLink>  to download the template. </b> </font>
+             </center>  
+             <apex:pageBlockButtons id="buttons">
+                <apex:commandButton action="{!Finish}" value="Import" id="finishButton" rendered="{!if(HideImport == 'display', true, false)}" />
+             </apex:pageBlockButtons>
+       
+       
+       <apex:pageBlockTable value="{!lLst}" var="record" rendered="{!if(CsvList != 'removecsvList', true, false)}">
+             <apex:repeat value="{!filedvalueClone}" var="head">  
+                <apex:column headerValue="{!head}" >
+                    <apex:outputText value="{!record[head]}" rendered="{!if(record.id == null, true, false)}"></apex:outputText>     
+                </apex:column>
+             </apex:repeat>
+       </apex:pageBlockTable>
+       
+       
+       <apex:pageBlockTable value="{!lLst}" var="record" rendered="{!if(FinalList == 'FinalListInserted', true, false)}">
+           <apex:repeat value="{!filedvalueClone}" var="head"> 
+              <apex:column headerValue="{!head}" >
+                   <apex:outputLink value="/{!record.id}" target="_blank" rendered="{!if(head == 'LastName', true, false)}">{!record[head]}</apex:outputLink>  
+                   <apex:outputField value="{!record[head]}" rendered="{!if(head != 'LastName', true, false)}"/>
+              </apex:column>
+           </apex:repeat> 
+       </apex:pageBlockTable>
+        
+     </apex:pageBlock>
+  </apex:form>
+</apex:page>

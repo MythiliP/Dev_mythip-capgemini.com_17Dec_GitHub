@@ -1,0 +1,6 @@
+<apex:page standardStylesheets="false" showHeader="false"> 
+<apex:form >
+   <apex:outputText value="The unformatted time right now is: {!NOW()}" />
+   <apex:commandButton value="Click here" action="/apex/second"/>
+   </apex:form>
+   </apex:page>

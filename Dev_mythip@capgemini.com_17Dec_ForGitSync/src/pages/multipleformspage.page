@@ -1,0 +1,62 @@
+<apex:page >
+ <apex:includeScript value="{!$Resource.JQueryFile}"/>
+ <apex:includeScript value="{!URLFOR($Resource.Multiple, 'js/jquery.slick.contact.1.3.2.js')}"  />
+<apex:stylesheet value="{!URLFOR($Resource.Multiple, 'css/form.css')}"  />
+<apex:stylesheet value="{!URLFOR($Resource.Multiple, 'css/admin.css')}"  />
+gfgfh
+ <script type="text/javascript">
+      
+           $(document).ready(function(){
+      // alert('hi');
+       $('#contact-tabs').dcSlickContact({
+    tabs: [{
+        form: {
+            // CREATE FORM ELEMENTS FOR TAB 1
+            intro: {type: 'textblock', text: 'This is an example of a standard contact form.'},
+            name: {type: 'text', label: 'Your name', validate: 'required,fake'},
+            emailfrom: {type: 'emailfrom', label: 'Your email'},
+            message: {type: 'textarea', label: 'Your message', validate: 'required'},
+            submit: {type: 'submit', text: 'Submit'}
+        },
+        title: 'Contact A',
+        subject: 'Contact A',
+        action: 'email_a.php',
+        icon: 'contact_m.png'
+    },{
+        form: {
+            // CREATE FORM ELEMENTS FOR TAB 2
+            intro: {type: 'textblock', text: 'This is an example of a standard contact form.'},
+            name: {type: 'text', label: 'Your name', validate: 'required,fake'},
+            emailfrom: {type: 'emailfrom', label: 'Your email'},
+            message: {type: 'textarea', label: 'Your message', validate: 'required'},
+            submit: {type: 'submit', text: 'Submit'}
+        },
+        title: 'Contact B',
+        subject: 'Contact B',
+        action: 'email_b.php',
+        icon: 'contact_f.png'
+    },{
+        form: {
+            // CREATE FORM ELEMENTS FOR TAB 3
+            intro: {type: 'textblock', text: 'This is an example of a standard contact form.'},
+            name: {type: 'text', label: 'Your name', validate: 'required,fake'},
+            emailfrom: {type: 'emailfrom', label: 'Your email'},
+            message: {type: 'textarea', label: 'Your message', validate: 'required'},
+            submit: {type: 'submit', text: 'Submit'}
+        },
+        title: 'Contact C',
+        subject: 'Contact C',
+        action: 'email_c.php',
+        icon: 'contacts.png'
+    }],
+    offset: 70,
+    location: 'left'
+});
+   
+        
+           });
+        </script> 
+        <div id="contact-tabs">
+      gfjgfj
+        </div>
+</apex:page>

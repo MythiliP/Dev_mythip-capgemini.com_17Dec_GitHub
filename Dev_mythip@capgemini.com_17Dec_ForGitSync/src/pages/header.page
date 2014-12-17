@@ -1,0 +1,5 @@
+<apex:page standardStylesheets="false" showHeader="false">
+	<header>
+		<a href="http://www.gci.com" title="Go to Homepage"></a>
+	</header>
+</apex:page>

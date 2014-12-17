@@ -1,0 +1,29 @@
+<apex:page standardStylesheets="false" showHeader="false" controller="CustomerLeadCaptureController">
+
+<apex:composition template="template">
+        <apex:define name="body">
+
+
+<!--[if lt IE 9]>
+<script src="javascripts/html5.js"></script>
+<![endif]-->
+
+
+    <div id="wrapper">
+        
+        <div id="wapperbody">
+
+          <div id='welocme_note'>
+                 <h1>Welcome!</h1>
+                 <p id="new_current">Are you a New or Current GCI Wireless Customer?</p>
+                 <p class="submit_btn"><a href="#">New Customer</a> <a href="current_customer.html">Current Customer</a></p>
+          </div>
+          
+        </div>
+          
+    </div>
+</apex:define>
+
+    </apex:composition>
+ 
+</apex:page>

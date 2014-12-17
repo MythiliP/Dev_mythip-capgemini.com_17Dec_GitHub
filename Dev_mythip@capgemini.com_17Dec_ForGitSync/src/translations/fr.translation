@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- MyCompany --></label>
+        <name>MyCompany</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Recruiting --></label>
+        <name>Recruiting</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- University --></label>
+        <name>University</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- University Details --></label>
+        <name>University_Details</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- rety --></label>
+        <name>rety</name>
+    </customApplications>
+    <customTabs>
+        <label><!-- Facebook --></label>
+        <name>Facebook</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Lightning:Form --></label>
+        <name>Lightning_Form</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Rediff --></label>
+        <name>Rediff</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- third --></label>
+        <name>third</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- yahoo --></label>
+        <name>yahoo</name>
+    </customTabs>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Candidates(Modified UI) --></description>
+        <label><!-- Candidates(Modified UI) --></label>
+        <name>Candidates_Modified_UI</name>
+        <sections>
+            <columns>
+                <label><!-- Country name --></label>
+                <name>Country name</name>
+            </columns>
+            <label><!-- Candidate --></label>
+            <name>Candidate</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- EmpWithDependent --></description>
+        <label><!-- EmpWithDependent --></label>
+        <name>EmpWithDependent</name>
+        <sections>
+            <label><!-- Common Fields --></label>
+            <name>Common Fields</name>
+        </sections>
+        <sections>
+            <label><!-- Dependents --></label>
+            <name>Dependents</name>
+        </sections>
+        <sections>
+            <label><!-- Details of Dependants --></label>
+            <name>Details of Dependants</name>
+        </sections>
+        <sections>
+            <columns>
+                <label><!-- Company Name --></label>
+                <name>Company Name</name>
+            </columns>
+            <label><!-- Employees --></label>
+            <name>Employees</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Employee-Dependant Details --></description>
+        <label><!-- Employee-Dependant Details --></label>
+        <name>Employee_Dependant_Details</name>
+        <sections>
+            <label><!-- Dependents --></label>
+            <name>Dependents</name>
+        </sections>
+        <sections>
+            <label><!-- Details of Dependants --></label>
+            <name>Details of Dependants</name>
+        </sections>
+        <sections>
+            <columns>
+                <label><!-- Employee Skills --></label>
+                <name>Employee Skills</name>
+            </columns>
+            <label><!-- Employee Skills --></label>
+            <name>Employee Skills</name>
+        </sections>
+        <sections>
+            <label><!-- Employees --></label>
+            <name>Employees</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Job Posting Sites with testmasters with Job Applications --></description>
+        <label><!-- Job Posting Sites with testmasters with Job Applications --></label>
+        <name>Job_Posting_Sites_with_testmasters_with_Job_Applications</name>
+        <sections>
+            <label><!-- Job Posting Sites --></label>
+            <name>Job Posting Sites</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Job Posting Sites with testmasters with Job Applications with Reviews --></description>
+        <label><!-- Job Posting Sites with testmasters with Job Applications with Reviews --></label>
+        <name>Job_Posting_Sites_with_testmasters_with_Job_Applications_with_Reviews</name>
+        <sections>
+            <label><!-- Job Posting Sites --></label>
+            <name>Job Posting Sites</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Job Posting Sites with testmasters with testch2s --></description>
+        <label><!-- Job Posting Sites with testmasters with testch2s --></label>
+        <name>Job_Posting_Sites_with_testmasters_with_testch2s</name>
+        <sections>
+            <label><!-- Job Posting Sites --></label>
+            <name>Job Posting Sites</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Job Posting Sites with testmasters with testch2s with Offers --></description>
+        <label><!-- Job Posting Sites with testmasters with testch2s with Offers --></label>
+        <name>Job_Posting_Sites_with_testmasters_with_testch2s_with_Offers</name>
+        <sections>
+            <label><!-- Job Posting Sites --></label>
+            <name>Job Posting Sites</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Job Posting Sites with testmasters with testch3s --></description>
+        <label><!-- Job Posting Sites with testmasters with testch3s --></label>
+        <name>Job_Posting_Sites_with_testmasters_with_testch3s</name>
+        <sections>
+            <label><!-- Job Posting Sites --></label>
+            <name>Job Posting Sites</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Positions(Modified UI) with Hiring manager info --></description>
+        <label><!-- Positions(Modified UI) with Hiring manager info --></label>
+        <name>Positions_Modified_UI_with_Hiring_manager_info</name>
+        <sections>
+            <label><!-- Hiring manager info --></label>
+            <name>Hiring manager info</name>
+        </sections>
+        <sections>
+            <label><!-- Positions --></label>
+            <name>Positions</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Positions with Offers --></description>
+        <label><!-- Positions with Offers --></label>
+        <name>Positions_with_Offers</name>
+        <sections>
+            <label><!-- Job Applications --></label>
+            <name>Job Applications</name>
+        </sections>
+        <sections>
+            <label><!-- Offers --></label>
+            <name>Offers</name>
+        </sections>
+        <sections>
+            <label><!-- Positions --></label>
+            <name>Positions</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Positions with or without job applications --></description>
+        <label><!-- Positions with or without job applications --></label>
+        <name>Positions_with_or_without_job_applications</name>
+        <sections>
+            <label><!-- Job Applications --></label>
+            <name>Job Applications</name>
+        </sections>
+        <sections>
+            <label><!-- Positions --></label>
+            <name>Positions</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- candidates with interviewers --></description>
+        <label><!-- candidates with interviewers --></label>
+        <name>candidates_with_interviewers</name>
+        <sections>
+            <label><!-- Candidate --></label>
+            <name>Candidate</name>
+        </sections>
+        <sections>
+            <label><!-- Interviewer info --></label>
+            <name>Interviewer info</name>
+        </sections>
+        <sections>
+            <label><!-- Job Applications --></label>
+            <name>Job Applications</name>
+        </sections>
+        <sections>
+            <label><!-- Reviews --></label>
+            <name>Reviews</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- testreport --></description>
+        <label><!-- testreport --></label>
+        <name>testreport</name>
+        <sections>
+            <label><!-- Positions --></label>
+            <name>Positions</name>
+        </sections>
+    </reportTypes>
+</Translations>

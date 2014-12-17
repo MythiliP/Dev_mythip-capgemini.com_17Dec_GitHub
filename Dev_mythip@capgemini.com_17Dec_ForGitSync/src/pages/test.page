@@ -1,0 +1,8 @@
+<apex:page controller="SiteLoginController" showheader="true" standardStylesheets="true" sidebar="true">
+<apex:tabpanel switchType="client" selectedTab="ideas">
+<apex:tab name="ideas" label="dgsfg"></apex:tab>
+</apex:tabpanel>
+<c:SiteLogin id="siteLogin"/>
+<br/><br/>
+<apex:outputLink value="https://login.salesforce.com" id="theLink">Telenor Employees - login</apex:outputLink>
+</apex:page>

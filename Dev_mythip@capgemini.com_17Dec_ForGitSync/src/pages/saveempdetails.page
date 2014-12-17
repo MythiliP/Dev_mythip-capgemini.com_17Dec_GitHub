@@ -1,0 +1,26 @@
+<apex:page showHeader="false" sidebar="false" controller="SaveEmpController" id="pg">
+<apex:form id="frm">
+Employee Name : <apex:inputtext value="{!empName}" id="employee"/><br/>
+Employee Department : <apex:inputtext value="{!empDept}"/><br/>
+Employee Salary : <apex:inputtext value="{!empSalary}"/><br/>
+Employee Bonus : <apex:inputtext value="{!empBonus}"/><br/>
+<apex:actionFunction name="test" action="{!saveEmp}"/>
+<apex:commandButton value="Save" onclick="checkEmpName();"/>
+
+<script>
+    function checkEmpName(){
+        var eName=document.getElementById('pg:frm:employee').value;
+        if(eName==null || eName==''){
+            alert('Please enter Name');
+        }
+        else{
+           test();
+        }
+        
+    }
+
+</script>
+</apex:form>  
+
+
+</apex:page>

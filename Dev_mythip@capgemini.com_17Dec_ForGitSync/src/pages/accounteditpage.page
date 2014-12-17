@@ -1,0 +1,24 @@
+<apex:page standardcontroller="Account" extensions="SaveAccounts1" sidebar="false" showHeader="false">
+
+<apex:form >
+  <apex:pageblock mode="edit">
+  <apex:sectionHeader Title="Account" />
+  <apex:pageblocksection title="Account Information" columns="1">
+  
+  <apex:inputField value="{!acc.Name}"/>
+  
+<apex:inputField value="{!acc.AccountNumber}"/>
+<apex:inputField value="{!acc.Business_Unit__c}"/>
+</apex:pageblocksection>
+<apex:pageblocksection title="Contribution Details">
+<apex:inputField value="{!acc.Contributions_Public_Support__c}"/>
+<apex:inputField value="{!acc.Contributions_Special_Events__c}"/>
+</apex:pageblocksection>
+<apex:pageBlockButtons >
+<apex:commandButton value="Save Acct" action="{!saveAccount}"/>
+</apex:pageBlockButtons>
+
+</apex:pageblock>
+</apex:form>
+
+</apex:page>

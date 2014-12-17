@@ -1,0 +1,173 @@
+<apex:page standardcontroller="Lead" extensions="CMF.CVFC_massConvertwithInputs" id="massConvertwithInputs" sidebar="false">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+    .accSelectandlookup
+    {
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    
+    }
+    
+    </style>
+<script>
+
+$(document).ready(function () {
+//Find all input textbox which has accountlookup in its id
+    $('input[id*="accountLookup"]').each(function (i)
+    {
+        $(this).css({opacity:0.01});  // reduce the opacity to make them invisible
+    });
+    var selects;
+            function timeout_trigger() {
+            $(this).closest("div").find("input[type='hidden']").each(function(){
+             if($(this).attr('id').indexOf("lkid") > -1){
+                    accid = $(this).val();
+                    
+                    selects = $(this).closest('div').find('.accSelectandlookup') ;
+                    //Check if the accid is already present in the selectoptions and if not then add  
+                       if (!selects.find('option[value="' + accid + '"]').length) {
+                        selects.append('<option value="' + accid + '"selected="selected">Attach to Existing : ' + accname + '</option>');
+                       // $('input[id$="selectedItemHidden"]').val($(this).val());
+                        $(this).closest('div').find('input[id$="selectedItemHidden"]').val($(this).val());  
+                        }
+                    }   
+        
+        });
+        }
+
+        
+       
+        $('input[id$="accountLookup"]').change(function() {
+            var element = this;
+            accname= $(this).val();
+            setTimeout(function () { timeout_trigger.call(element) }, 1000);
+            
+        }); 
+    
+    /* $('input[id$="accountLookup"]').blur(function() {
+        accname = $(this).val()
+            $(this).closest("div").find("input[type='hidden']").each(function(){
+                //alert($(this).attr('id') + ' on blur ' + $(this).val());
+                if($(this).attr('id').indexOf("lkid") > -1){
+                    accid = $(this).val();
+                    
+                    selects = $(this).closest('div').find('.accSelectandlookup') ;
+                    //Check if the accid is already present in the selectoptions and if not then add  
+                       if (!selects.find('option[value="' + accid + '"]').length) { 
+                        selects.append('<option value="' + accid + '"selected="selected">Attach to Existing : ' + accname + '</option>');
+                        }
+                    selects.change(function() {
+                        $(this).siblings().last().val($(this).val());
+                        alert($(this).siblings().last().val());
+                    });
+                    }
+                    
+                    //alert('accid = '+ accid);
+                    //alert('accname = '+ accname);
+                
+            }); 
+        }); 
+        */
+       
+       
+
+
+});
+
+function toggleCheckAll(checkAllBox) {
+    $('input[type=checkbox][id*=icbDNCOpp]').prop('checked', checkAllBox.checked);
+}
+        
+</script>
+<apex:messages /> 
+<apex:pageBlock rendered="{!if(cr.size > 0, false,true)}">
+<apex:outputPanel >
+    <apex:outputText value="Only a maximum of 75 Leads can be processed for conversion at one instance. All Leads upto the 75th Lead would be processed and rest would have to be selected again for conversion " style="font-weight:bold" />
+</apex:outputPanel>
+</apex:pageBlock>
+<apex:form id="pbformmconvertInput"> 
+<apex:outputPanel >
+    <apex:outPutText value="{!errormsg}" rendered="{!if(errormsg != '',true,false)}" />
+</apex:outputPanel>
+<apex:pageBlock id="pbmconvertInput" rendered="{!if(wrapperList.size > 0, true,false)}">
+    
+    
+
+    <apex:pageBlockSection columns="8" id="pbsmconvertInput">
+        <apex:pageBlockTable value="{!wrapperList}" var="s" id="pbspbtable">
+            <apex:column headerValue="Lead Name"  id="pbspbtableLeadName"> 
+                <apex:outputlink value="/{!s.led.ownerID}"   ><apex:outputText value="{!s.led.name}"></apex:outputText> </apex:outputlink>
+            </apex:column>
+            <apex:column headerValue="Lead Owner" id="pbspbtableLeadOwner">
+                <apex:inputfield value="{!s.led.ownerID}"   /> 
+            </apex:column>     
+            <apex:column headerValue="Account" id="pbspbtableAccount" > 
+            <apex:outputPanel id="optableAccount" style="width:160px;position:relative" layout="block">
+                 <apex:inputfield value="{!s.c.AccountId}" id="accountLookup" />    
+                 <!--  <apex:selectList id="selectAccount" value="{!s.selectedAccount}" size="1" styleClass="accSelectandlookup" style="width:148px">
+                    <apex:selectOptions value="{!s.AccountList}"/>
+                </apex:selectList>  -->
+                <select id="someList"  Class="accSelectandlookup" style="width:148px">
+                    <option value="000000000000000000">Create New Account:  {!s.led.company}</option>
+                    <apex:repeat value="{!s.accList}" var="a">
+                        <option value="{!a.id}">{!a.name}</option>
+                    </apex:repeat>
+                </select>
+                <apex:inputHidden value="{!s.selectedAccounta}" id="selectedItemHidden" />  
+               
+            </apex:outputPanel>
+            </apex:column> 
+           <apex:column >
+           <apex:facet name="header">
+                 <input type="checkbox" id="checkAllBox" onclick="toggleCheckAll(this)"/>
+                Do not Create<br/> Opportunity
+            </apex:facet>    
+                          
+                <apex:inputcheckbox value="{!s.donotCreateOpp}"  id="icbDNCOpp"/>      
+            </apex:column> 
+            <apex:column headerValue="Opportunity Name"  id="pbspbtableOppName"> 
+                 <apex:inputText value="{!s.oppName}"  id="oppName"/>
+            </apex:column>
+            <apex:column headerValue="Converted Status"  id="pbspbtableConvertedStatus"> 
+                 <apex:selectList id="convStatus" value="{!s.status}" size="1" >
+                    <apex:selectOptions value="{!s.convertedStatusList}"/>
+                </apex:selectList>
+            </apex:column>
+            <apex:column headerValue="Subject"  id="pbspbtableSubject"> 
+                <apex:inputfield value="{!s.tsk.subject}"  id="subject" />
+            </apex:column>  
+            <apex:column headerValue="Due Date"  id="pbspbtableDueDate"> 
+                <apex:inputfield value="{!s.tsk.ActivityDate}"  id="ActivityDate" />
+            </apex:column>   
+                    
+            
+        </apex:pageBlockTable>
+    </apex:pageBlockSection>
+     <apex:pageBlockButtons >
+        <apex:commandButton action="{!convert}" value="Convert Leads"/>
+    </apex:pageBlockButtons>
+    
+ </apex:pageBlock>
+</apex:form>
+<apex:pageBlock rendered="{!if(cr.size > 0, true,false)}">
+
+    <apex:pageBlockSection columns="1" title="Following Leads were successfully converted">
+        <apex:pageBlockTable id="conversionResults" value="{!cr}" var="s">
+
+            <apex:column headerValue="Lead" >
+                <apex:outputText value="{!s.leadname}"   />
+            </apex:column> 
+            <apex:column headerValue="Opportunity" >
+                <apex:outputLink value="/{!s.oppId}" rendered="{!if(s.oppId == null || s.oppId =='', false,true)}"> {!s.oppName} </apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="Account" >
+                <apex:outputLink value="/{!s.accId}" rendered="{!if(s.accId == null || s.accId =='', false,true)}"> {!s.AccountName} </apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="Contact" >
+                <apex:outputLink value="/{!s.contactId}" rendered="{!if(s.contactId == null || s.contactId =='', false,true)}"> {!s.Contactname} </apex:outputLink>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlockSection>
+ </apex:pageBlock>
+</apex:page>

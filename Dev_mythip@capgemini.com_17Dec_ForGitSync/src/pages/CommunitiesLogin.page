@@ -1,0 +1,5 @@
+<apex:page id="loginPage" controller="CommunitiesLoginController" action="{!forwardToCustomAuthPage}" title="{!$Label.site.site_login}">
+    <apex:form >
+    <apex:inputtext />
+    </apex:form>
+</apex:page>

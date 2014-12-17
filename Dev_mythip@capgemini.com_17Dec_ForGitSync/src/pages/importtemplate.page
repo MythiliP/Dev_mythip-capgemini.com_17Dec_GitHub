@@ -1,0 +1,13 @@
+<apex:page >
+  <apex:composition template="templateMain">
+     <apex:define name="test">
+     fgdh
+     fdh
+     vhjjkklkll
+     fgb
+     hkkk
+</apex:define>
+
+  </apex:composition>
+  ddddddddddddddddddddd
+</apex:page>

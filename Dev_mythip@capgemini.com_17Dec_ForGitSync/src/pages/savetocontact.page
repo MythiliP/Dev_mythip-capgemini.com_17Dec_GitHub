@@ -1,0 +1,10 @@
+<apex:page controller="SaveToContacts" showHeader="false" sidebar="false" standardStylesheets="false">
+ <apex:form >
+<apex:outputLabel >Contact Name :</apex:outputLabel>
+<apex:inputText value="{!contactName}"/><br/>
+Contact Department<apex:inputText value="{!contactDept}"/><br/>
+Has Email Opt Out<apex:inputCheckbox value="{!contactEmailOptOut}"/><br/>
+Birth Date <apex:inputText value="{!conBirthDate}"/><br/>
+<apex:commandButton value="Save" action="{!saveToCon}"/>
+ </apex:form>
+</apex:page>

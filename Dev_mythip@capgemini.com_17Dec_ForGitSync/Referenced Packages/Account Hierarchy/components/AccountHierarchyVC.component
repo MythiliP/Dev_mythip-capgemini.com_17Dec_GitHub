@@ -1,0 +1,88 @@
+<apex:component allowDML="true" controller="AppShark_AH.AccountHierarchyController" id="comp" access="global">
+<style>
+    .actcontent{
+        padding-top:20px;
+    }
+    .newgrid{
+        background:#FFF;
+        border:1px #F0F0F0 solid;
+    }
+    .newgrid th{
+        padding:4px;
+        border:1px #DDD solid;
+        background:#f2f3f3;
+        border-left:none;
+    }
+    .newgrid th:first-child{
+        border-left:1px #DDD solid;
+    }
+    .newgrid td{
+        padding:4px;
+        border-bottom:1px #F0F0F0 solid;
+    }
+    .apexp .bPageBlock.apexDefaultPageBlock .pbBody{
+        margin:7px 5px !important;
+    }
+</style>
+<apex:sectionHeader rendered="{!renderheader}" title="Account Hierarchy " subtitle="{!Account.name}" id="SecHeader" />
+<apex:outputPanel styleClass="bDescription" id="desc">The hierarchy is created by associating accounts with parent accounts. </apex:outputPanel>
+<apex:outputPanel layout="block" styleClass="actcontent" id="outpanel">
+   <apex:pageBlock id="pgb">
+       <apex:form id="fm">
+           <apex:outputPanel id="AccountHeirarchyPanel" layout="block" >
+                <table border="0" cellpadding="0" cellspacing="0" class="newgrid" width="100%" id="Htbl">
+                       <tr>
+                           <th style="font-size: .9em;">Action</th>
+                           <apex:repeat value="{!lstColsToShow }" var="field" >
+                               <th style="font-size: .9em;">{!field}</th>
+                           </apex:repeat>
+                       </tr>   
+                       <apex:repeat value="{!FieldsToShow}" var="actField" id="noderepeat">
+                           <tr>
+                               <td>
+                                   <apex:outputlink value="/{!AccountHierarchy[actField].account.id}/e?retURL=%2F{!AccountHierarchy[actField].account.id}" onclick="redirecttoAccount('{!AccountHierarchy[actField].account.id}');return false;" rel="_blank">Edit</apex:outputlink>
+                               </td>
+                               <apex:repeat value="{!TableHeaders}" var="field" id="fieldrepeat">
+                                    <td id="col_{!field}" style="padding-left:{!IF(field!='Name','0',AccountHierarchy[actField].PaddingWidth)}px;font-weight:{!IF(AccountHierarchy[actField].account[field]==Account.name,'Bold','')};text-align:left;">                 
+                                       <apex:outputLink value="/{!AccountHierarchy[actField].account.id}" rel="_blank" onclick="redirecttoAccountDetail('{!AccountHierarchy[actField].account.id}');return false;" id="theoutputlink" rendered="{!IF(field=='Name',true,false)}">
+                                           <apex:outputField value="{!AccountHierarchy[actField].account[field]}" />
+                                       </apex:outputLink>
+                                       <apex:outputField value="{!AccountHierarchy[actField].account[field]}" id="oupfield" rendered="{!IF(field=='Name' ,false,true)}" />
+                                         <script type="text/javascript">
+                                            if(document.getElementById('{!$Component.oupfield}') != null){
+                                                var Opt = document.getElementById('{!$Component.oupfield}');
+                                                if(Opt.getElementsByTagName('a')!=null && Opt.getElementsByTagName('a').length>0){
+                                                    Opt.getElementsByTagName('a')[0].target = '_blank';
+                                                }
+                                            }
+                                         </script>
+                                    </td>
+                               </apex:repeat>
+                           </tr>   
+                       </apex:repeat> 
+                </table>
+               <apex:outputpanel id="logopnl" style="width:100%;float:right;text-align:right;" rendered="{!bDisplayLogo}">
+                   <apex:image value="{!$Resource.AppShark_AH__AppShark_Logo}" style="width:150px;"/>
+               </apex:outputpanel>
+               <script>
+                    var tblRows=document.getElementById('Htbl').rows;
+                    for(var i=0;i<tblRows.length;i++){
+                        for(var j=0;j<tblRows[i].cells.length;j++){
+                            if(j>1)
+                                tblRows[i].cells[j].style.textAlign='center';
+                        }
+                    }
+               </script>
+            </apex:outputPanel>
+      </apex:form>
+  </apex:pageBlock>
+</apex:outputPanel>
+<script>
+   function redirecttoAccount(Accid){
+       window.top.location.href='/'+Accid+'/e?retURL=%2F'+Accid; 
+   }
+   function redirecttoAccountDetail(Accid){
+       window.top.location.href='/'+Accid
+   }
+</script>
+</apex:component>

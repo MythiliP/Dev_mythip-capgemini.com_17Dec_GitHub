@@ -1,0 +1,21 @@
+<apex:page controller="DisplayContactsController" showHeader="false" sidebar="false">
+<apex:form >
+Contact Name : <apex:inputtext value="{!conName}"/>
+<apex:commandButton value="Search" action="{!searchContacts}" reRender="pgBlock"/>
+<apex:pageBlock id="pgBlock">
+<apex:pageBlocksection >
+<apex:pageblocktable value="{!conList}" var="con" border="1">
+<apex:column value="{!con.Name}" headerValue="Name"/>
+<apex:column value="{!con.MailingCity}" headerValue="Mailing City"/>
+<apex:column value="{!con.MailingCountry}" headerValue="Mailing Country"/>
+<apex:column value="{!con.MailingState}" headerValue="Mailing State"/>
+<apex:column value="{!con.LeadSource}" headerValue="Lead Source"/>
+<apex:column value="{!con.Birthdate}" headerValue="Birth Date"/>
+<apex:column value="{!con.MobilePhone}" headerValue="Mobile Phone"/>
+<apex:column value="{!con.Account.Name}" headerValue="Account Name"/>
+<apex:column value="{!con.Account.Rating}" headerValue="Account Rating"/>
+</apex:pageblocktable>
+</apex:pageBlocksection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

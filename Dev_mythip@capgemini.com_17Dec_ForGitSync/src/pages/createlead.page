@@ -1,0 +1,21 @@
+<apex:page standardController="Lead" extensions="SaveLead" showHeader="false" sidebar="false">
+<apex:form >
+<apex:sectionHeader title="Lead"/>
+<apex:pageBlock title="Lead Information">
+<apex:pageBlockSection columns="1" title="Lead Name">
+<apex:inputField value="{!custLead.firstname}"/>
+<apex:inputField value="{!custLead.lastname}"/>
+ </apex:pageBlockSection>
+<apex:pageBlockSection title="Extra Details">
+  <apex:inputField value="{!custLead.company}"/>
+    <apex:inputField value="{!custLead.status}"/>
+
+</apex:pageBlockSection>
+   
+    <apex:pageBlockButtons >
+    <apex:commandButton value="Save" action="{!saveToLead}"/>
+    </apex:pageBlockButtons>
+    
+    </apex:pageBlock>
+ </apex:form>
+</apex:page>

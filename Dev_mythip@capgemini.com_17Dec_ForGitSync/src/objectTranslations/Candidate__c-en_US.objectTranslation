@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Candidate</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Candidate</value>
+    </caseValues>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drivers License Number --></label>
+        <name>Drivers_License_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Candidate --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picture ID --></label>
+        <name>Picture_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picture Link --></label>
+        <name>Picture_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picture URL --></label>
+        <name>Picture_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picture --></label>
+        <name>Picture__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Security Number --></label>
+        <name>Social_Security_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip Postal Code --></label>
+        <name>Zip_Postal_Code__c</name>
+    </fields>
+    <layouts>
+        <layout>Candidate Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Candidate Name</nameFieldLabel>
+    <recordTypes>
+        <label><!-- bvxb --></label>
+        <name>bvxb</name>
+    </recordTypes>
+    <sharingReasons>
+        <label><!-- Needs Approval --></label>
+        <name>Needs_Approval</name>
+    </sharingReasons>
+    <sharingReasons>
+        <label><!-- Needs Discount --></label>
+        <name>Needs_Discount</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- enter proper format --></errorMessage>
+        <name>Valid_SSN_Format</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- zip code does not exist --></errorMessage>
+        <name>Zip_Code_Consistent_With_State</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 5 or 5-4 format --></errorMessage>
+        <name>Zip_Code_must_be_Valid_Postal_US_Code</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,4 @@
+<apex:page >
+ Tgfgh
+  <apex:insert name="test"/>
+</apex:page>

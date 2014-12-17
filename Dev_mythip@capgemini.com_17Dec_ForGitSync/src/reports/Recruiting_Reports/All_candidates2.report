@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Candidate__c$Name</field>
+    </columns>
+    <columns>
+        <field>Candidate__c$Social_Security_Number__c</field>
+    </columns>
+    <columns>
+        <field>Candidate__c$Country__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>All candidates2</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Candidates_Modified_UI__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Candidate__c$LastModifiedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

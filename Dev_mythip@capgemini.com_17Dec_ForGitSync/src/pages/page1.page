@@ -1,0 +1,9 @@
+<apex:page standardStylesheets="false" showHeader="false" controller="RedirectToPage2" >
+<apex:form >
+<apex:outputLabel value="Name"/>
+<apex:inputText id="Name" value="{!name}"/>
+<apex:outputLabel value="Age"/>
+<apex:inputText id="Age" value="{!age}"/>
+<apex:commandButton action="{!redirect}" value="Submit" id="testButton"/>
+</apex:form>
+</apex:page>

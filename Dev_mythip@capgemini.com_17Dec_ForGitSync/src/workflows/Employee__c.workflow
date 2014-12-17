@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Satus_To_Approved</fullName>
+        <field>Satus_Of_Approval__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Satus_To_Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Satus_To_Rejected</fullName>
+        <field>Satus_Of_Approval__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Satus_To_Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_To_InProgress</fullName>
+        <field>Satus_Of_Approval__c</field>
+        <literalValue>In Progress</literalValue>
+        <name>Set_Status_To_InProgress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_To_approved</fullName>
+        <field>Satus_Of_Approval__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Set_To_approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_To_rejected</fullName>
+        <field>Satus_Of_Approval__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Set_To_rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_InProgess</fullName>
+        <field>Satus_Of_Approval__c</field>
+        <literalValue>In Progress</literalValue>
+        <name>Status_InProgess</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+</Workflow>
