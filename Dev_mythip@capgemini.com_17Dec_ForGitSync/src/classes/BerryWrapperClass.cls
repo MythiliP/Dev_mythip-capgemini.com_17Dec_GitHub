@@ -9,4 +9,5 @@ public class BerryWrapperClass{
       public String test7{get;set;}
    public String test8{get;set;}
     public String test81{get;set;}
+     public String test82{get;set;}
 }
