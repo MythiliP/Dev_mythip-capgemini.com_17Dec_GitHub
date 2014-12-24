@@ -8,7 +8,7 @@ public class ABC{
         a='sfdf';
     }
     
-    public void SDDF(){
+    public void SDDFG(){
         //a='dfsdfdsg';
     }
 }
